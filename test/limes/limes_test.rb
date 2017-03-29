@@ -98,7 +98,7 @@ describe "limes features" do
       response = cloud.resources.set_quota_for_domain("d247861f96094b689d1b358513638296", "domain" => new_quota)
       #TODO -> TEST
       
-      response = cloud.resources.discover_domains_projects("d247861f96094b689d1b358513638296")
+      response = cloud.resources.discover_domain_projects("d247861f96094b689d1b358513638296")
       response.code.must_equal "204"
 
     end
