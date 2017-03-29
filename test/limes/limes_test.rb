@@ -38,6 +38,9 @@ describe "limes features" do
       assert_kind_of Integer, response.body["project"]["services"][0]["resources"][0]["quota"], "check resource quota"
       assert_kind_of Integer, response.body["project"]["services"][0]["resources"][0]["usage"], "check resource usage"
 
+      response = cloud.resources.sync_project("d247861f96094b689d1b358513638296","2b121dc9245c4a4bae5ffa494b586be8")
+      response.code.must_equal "202"
+
     end
   end
   
@@ -94,6 +97,9 @@ describe "limes features" do
 
       response = cloud.resources.set_quota_for_domain("d247861f96094b689d1b358513638296", "domain" => new_quota)
       #TODO -> TEST
+      
+      response = cloud.resources.discover_domains_projects("d247861f96094b689d1b358513638296")
+      response.code.must_equal "204"
 
     end
   end
@@ -126,6 +132,9 @@ describe "limes features" do
       assert_equal "cores", response.body["domains"][0]["services"][0]["resources"][0]["name"], "check for resource cores"
       assert_kind_of Integer, response.body["domains"][0]["services"][0]["resources"][0]["quota"], "check resource quota"
       assert_kind_of Integer, response.body["domains"][0]["services"][0]["resources"][0]["usage"], "check resource usage"
+      
+      response = cloud.resources.discover_domains
+      response.code.must_equal "204"
       
     end
   end

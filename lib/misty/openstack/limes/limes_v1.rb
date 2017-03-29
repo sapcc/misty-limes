@@ -23,7 +23,7 @@ module Misty::Openstack::LimesV1
       
       "/v1/domains/discover" => {:POST=>[:discover_domains]},
       "/v1/domains/{domain_id}/projects/discover" => {:POST=>[:discover_domains_projects]},
-      "/v1/domains/{domain_id}/projects/{project_id}/sync" => {:POST=>[:sync_domain_projects]},
+      "/v1/domains/{domain_id}/projects/{project_id}/sync" => {:POST=>[:sync_project]},
     }
   end
 end
