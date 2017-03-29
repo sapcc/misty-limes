@@ -1,0 +1,6 @@
+*.gem
+.bundle/
+.byebug_history
+misty.log
+Gemfile.lock
+.env
