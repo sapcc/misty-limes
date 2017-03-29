@@ -180,7 +180,6 @@ describe "limes features" do
       assert_kind_of Integer, response.body["clusters"][0]["services"][1]["resources"][0]["domains_quota"], "check resource quota"
       assert_kind_of Integer, response.body["clusters"][0]["services"][1]["resources"][0]["usage"], "check resource usage"
 
-
       response = cloud.resources.get_service_for_clusters("compute")
       response.code.must_equal "200"
       assert_equal "compute", response.body["clusters"][0]["services"][0]["type"], "check for service  compute"

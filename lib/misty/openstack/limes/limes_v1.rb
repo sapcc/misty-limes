@@ -22,8 +22,8 @@ module Misty::Openstack::LimesV1
       "/v1/domains/{domain_id}/projects/{project_id}?service={service}&resource={resource}" => {:GET=>[:get_service_resource_for_project]},
       
       "/v1/domains/discover" => {:POST=>[:discover_domains]},
-      "/v1/domains/{domain_id}/projects/sync" => {:POST=>[:sync_domain_projects]},
-      
+      "/v1/domains/{domain_id}/projects/discover" => {:POST=>[:discover_domains_projects]},
+      "/v1/domains/{domain_id}/projects/{project_id}/sync" => {:POST=>[:sync_domain_projects]},
     }
   end
 end
