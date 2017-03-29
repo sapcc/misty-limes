@@ -39,5 +39,5 @@ coming soon ;-)
 
 ## License
 
-The gem is available as open source under the terms of the enclosed GPL-3.0.
+The gem is available as open source under the terms of the enclosed Apache-2.0
 
