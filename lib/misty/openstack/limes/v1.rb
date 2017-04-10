@@ -8,6 +8,7 @@ module Misty
         extend Misty::Openstack::LimesV1
 
         def self.api
+          # https://github.com/sapcc/limes/blob/master/docs/design/002-public-api.md
           v1
         end
 
