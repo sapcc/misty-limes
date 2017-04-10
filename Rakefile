@@ -1,9 +1,8 @@
+require 'dotenv/tasks'
 require 'rake/testtask'
 
-task :default => [:test]
-
 desc "Run limes tests"
-task :limes do
+task :limes => [:dotenv] do
   Rake::TestTask.new do |t|
     t.name = 'limes'
     t.libs << "test/limes"
