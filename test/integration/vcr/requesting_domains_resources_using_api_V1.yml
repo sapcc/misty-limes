@@ -1,0 +1,329 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://identity.openstack/v3/auth/tokens
+    body:
+      encoding: UTF-8
+      string: '{"auth":{"identity":{"methods":["password"],"password":{"user":{"name":"foobar","domain":{"id":"ca1b267e149d4e44bf53d28d1c8d6bc9"},"password":"foobar"}}},"scope":{"project":{"id":"6a030751147a45c0863c3b5bde32c744"}}}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx/1.11.10
+      Date:
+      - Mon, 10 Apr 2017 11:40:56 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '12235'
+      Connection:
+      - keep-alive
+      X-Subject-Token:
+      - gAAAAABY629I7jA-37FQZlTJUC_ZIGzwSFiTYQNxNjOe_QFZ6ovgfsSOSS_OJeLRTwsZa7J2il2w5QejIXSQCMnpeFQCzS9AGWktOhL4G52LTE3lqXy7le2-VVnUKfDV_301aAAC7h_zIzhjxZSkmmFEJSYTIp1oe7Q3xETG1fraSFOy_2Ma1ETLJ0mHD9gkLqfNAXSiFONXruK5AO5yrpCmNP5fQnt7UXcHPRTGSlUAjnXCmCMEPAc
+      Vary:
+      - X-Auth-Token
+      X-Openstack-Request-Id:
+      - req-34bd26e8-f021-4860-bb8a-4948e85686e0
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"token": {"methods": ["password"], "roles": [{"id": "57d36ec557534d73adf1a7d4f6500d18",
+        "name": "cloud_sharedfilesystem_admin"}, {"id": "a64603dea1a24036953c9160e8707460",
+        "name": "cloud_dns_admin"}, {"id": "e290d3a4683247909ca8a1dd79e59d6c", "name":
+        "cloud_volume_admin"}, {"id": "05b4ba16ce874993aa61d38be046dfd6", "name":
+        "cloud_keymanager_admin"}, {"id": "be4b16997dcc4afcbcc84c9348087f9c", "name":
+        "swiftreseller"}, {"id": "d1c1cd5484214574bb4fbc6595def9a6", "name": "admin"},
+        {"id": "1b8648900b3444ee817b0a8c698426ca", "name": "cloud_network_admin"},
+        {"id": "c1a769d40182440d8d8a1fb38729787f", "name": "cloud_resource_admin"},
+        {"id": "8c5286ffb08d4853a45f1dc1bfcbb61c", "name": "cloud_compute_admin"},
+        {"id": "0e10d5464ae2409082928980193a0c00", "name": "cloud_image_admin"}],
+        "is_admin_project": true, "project": {"domain": {"id": "ca1b267e149d4e44bf53d28d1c8d6bc9",
+        "name": "foobar"}, "id": "6a030751147a45c0863c3b5bde32c744", "name": "cloud_admin"},
+        "catalog": [{"endpoints": [{"region_id": "foobar", "url": "https://share-3.foobar.cloud.cluster:443/v2/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "public", "id": "2f0623e5f9204d83931fd57a1fdb1123"},
+        {"region_id": "foobar", "url": "http://manila-api.foobar.svc.kubernetes.foobar.cloud.cluster:8786/v2/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "internal", "id": "988f5ca2e8de446db6a36f54045efeac"},
+        {"region_id": "foobar", "url": "http://manila-api.foobar.svc.kubernetes.foobar.cloud.cluster:8786/v2/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "admin", "id": "127042e3843d4fb9b62a79633f95ba15"}],
+        "type": "sharev2", "id": "999ab682b1da4982ac2eaa6d16e2f620", "name": "manilav2"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://arc.foobar.cloud.cluster:443",
+        "region": "foobar", "interface": "public", "id": "54a9c567c4be4fa7835133b024f8923f"}],
+        "type": "arc", "id": "eb6ff7bc28d04a2783f665f011d6df62", "name": "Arc"}, {"endpoints":
+        [{"region_id": "foobar", "url": "http://ironic-api.foobar.svc.kubernetes.foobar.cloud.cluster:6385",
+        "region": "foobar", "interface": "internal", "id": "d6fa2fe8b1fa434b883fe3328fbdbda5"},
+        {"region_id": "foobar", "url": "https://baremetal-3.foobar.cloud.cluster:443",
+        "region": "foobar", "interface": "public", "id": "316493ea520142ca98dd3e1d30beb7b5"},
+        {"region_id": "foobar", "url": "http://ironic-api.foobar.svc.kubernetes.foobar.cloud.cluster:6385",
+        "region": "foobar", "interface": "admin", "id": "0a97f39ddae1412e97a5f21b4432e9a8"}],
+        "type": "baremetal", "id": "93bf146f641b42a1b28c22b64ad0e23d", "name": "ironic"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://keymanager-3.foobar.cloud.cluster:443",
+        "region": "foobar", "interface": "public", "id": "43e287df110b4889a34eecbacdbd8a41"},
+        {"region_id": "foobar", "url": "http://barbican-api.foobar.svc.kubernetes.foobar.cloud.cluster:9311",
+        "region": "foobar", "interface": "internal", "id": "cc6e3f6b47de4213bdf663675baa4f86"},
+        {"region_id": "foobar", "url": "http://barbican-api.foobar.svc.kubernetes.foobar.cloud.cluster:9311",
+        "region": "foobar", "interface": "admin", "id": "461849e8b3a342d3a291506e1985b08d"}],
+        "type": "key-manager", "id": "08c811648b504ca2b2cfd88a2a07f194", "name": "barbican"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://volume-3.foobar.cloud.cluster:443/v2/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "public", "id": "52846c1572cf4f7b9074584fd5e9495d"},
+        {"region_id": "foobar", "url": "http://cinder-api.foobar.svc.kubernetes.foobar.cloud.cluster:8776/v2/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "internal", "id": "0ff5e424c17b4f2fb1aec59abfa482e3"},
+        {"region_id": "foobar", "url": "http://cinder-api.foobar.svc.kubernetes.foobar.cloud.cluster:8776/v2/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "admin", "id": "ecd9d544e4304d53929a1d9befe1eb7a"}],
+        "type": "volumev2", "id": "defd346d6cb145bc8c6dde484ff96e91", "name": "cinderv2"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://objectstore-3.foobar.cloud.cluster:443/v1/AUTH_6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "internal", "id": "8ae55154d72c45ac825ad17a5d2fe941"},
+        {"region_id": "foobar", "url": "https://objectstore-3.foobar.cloud.cluster:443/v1/AUTH_6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "public", "id": "a6ee953c5fc04fd48363c3aaaf469f17"},
+        {"region_id": "foobar", "url": "https://objectstore-3.foobar.cloud.cluster:443/v1",
+        "region": "foobar", "interface": "admin", "id": "4b9b0916e18c4757bd42cf29d449754e"}],
+        "type": "object-store", "id": "857f8a01ba7d40399d7d3657c72b500e", "name":
+        "swift"}, {"endpoints": [{"region_id": "foobar", "url": "https://image-3.foobar.cloud.cluster:443",
+        "region": "foobar", "interface": "public", "id": "5338ffd565884035941ec3be3ad9002d"},
+        {"region_id": "foobar", "url": "http://glance.foobar.svc.kubernetes.foobar.cloud.cluster:9292",
+        "region": "foobar", "interface": "internal", "id": "81c0b570c44b4a978eb58a28e605f928"},
+        {"region_id": "foobar", "url": "http://glance.foobar.svc.kubernetes.foobar.cloud.cluster:9292",
+        "region": "foobar", "interface": "admin", "id": "c3967eb5b037433894e33218e6e953bb"}],
+        "type": "image", "id": "1db038028295470499be817ca0880dbc", "name": "glance"},
+        {"endpoints": [{"region_id": "foobar", "url": "http://monasca-api.monasca.svc.kubernetes.foobar.cloud.cluster:8070/v2.0",
+        "region": "foobar", "interface": "admin", "id": "6f06c9fb62ee48a1b63cc77b2bf89ae1"},
+        {"region_id": "foobar", "url": "http://monasca-api.monasca.svc.kubernetes.foobar.cloud.cluster:8070/v2.0",
+        "region": "foobar", "interface": "internal", "id": "099c924a40da4862885ab324be95904f"},
+        {"region_id": "foobar", "url": "https://monitoring.foobar.cloud.cluster:443/v2.0",
+        "region": "foobar", "interface": "public", "id": "011d8cb4bd9a4917a6022c93fd105922"}],
+        "type": "monitoring", "id": "6f674669b6a04e15b1d1a97366b00395", "name": "monasca"},
+        {"endpoints": [{"region_id": "foobar", "url": "http://metering-3.foobar.cloud.cluster:8777",
+        "region": "foobar", "interface": "public", "id": "21e8e980f4a24731baeaea9b7a9a69d6"},
+        {"region_id": "foobar", "url": "http://metering-3.foobar.cloud.cluster:8777",
+        "region": "foobar", "interface": "internal", "id": "2ceaea4ea02746e2a8f5b98c6cae6868"},
+        {"region_id": "foobar", "url": "http://metering-3.foobar.cloud.cluster:8777",
+        "region": "foobar", "interface": "admin", "id": "7b35b996c1024b78951af72248bf96e5"}],
+        "type": "metering", "id": "621f5f04ac2248ec92f12edc8e941fde", "name": "ceilometer"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://billing.foobar.cloud.cluster:64000",
+        "region": "foobar", "interface": "public", "id": "124c9f35a3a84dc1afa52e58cff90233"}],
+        "type": "clustercc-billing", "id": "da42a69c3e954cd8a24d28ed445e2a98", "name":
+        "clustercc-billing"}, {"endpoints": [{"region_id": "foobar", "url": "https://lyra.foobar.cloud.cluster:443",
+        "region": "foobar", "interface": "public", "id": "b035e9d2f7904476b258d2d9f6579f55"}],
+        "type": "automation", "id": "1e79086219354149b451d51feff38967", "name": "Lyra"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://compute-3.foobar.cloud.cluster:443/v2/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "public", "id": "383c3adc7a334d1e89f3d824167b4ad2"},
+        {"region_id": "foobar", "url": "http://nova-api.foobar.svc.kubernetes.foobar.cloud.cluster:8774/v2/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "internal", "id": "f92bf0dad1e941d09d9a08cb50362510"},
+        {"region_id": "foobar", "url": "http://nova-api.foobar.svc.kubernetes.foobar.cloud.cluster:8774/v2/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "admin", "id": "da09586d8bb44903a53efcebe67841d9"}],
+        "type": "compute", "id": "45b131798dc240c4b5d75e024dffc5b5", "name": "nova"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://identity-3.foobar.cloud.cluster:443/v3",
+        "region": "foobar", "interface": "public", "id": "7859f84c67d740b294c9a607d03c2991"},
+        {"region_id": "foobar", "url": "http://keystone.foobar.svc.kubernetes.foobar.cloud.cluster:5000/v3",
+        "region": "foobar", "interface": "internal", "id": "a2cff5bcad944eb4a10c06e6c05140eb"},
+        {"region_id": "foobar", "url": "https://identity-admin-3.foobar.cloud.cluster:443/v3",
+        "region": "foobar", "interface": "admin", "id": "5973c23918b8460886140c5ed6a5411b"}],
+        "type": "identity", "id": "70c56d9a4833404e823ba1195a0f1a63", "name": "keystone"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://share-3.foobar.cloud.cluster:443/v1/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "public", "id": "aa42c3a4f7b54d95819fc6481626cedc"},
+        {"region_id": "foobar", "url": "http://manila-api.foobar.svc.kubernetes.foobar.cloud.cluster:8786/v1/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "internal", "id": "68abd86060354f83932f7d283339eff1"},
+        {"region_id": "foobar", "url": "http://manila-api.foobar.svc.kubernetes.foobar.cloud.cluster:8786/v1/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "admin", "id": "52450fbc1b4e48cda51bb5e58ab4b15f"}],
+        "type": "share", "id": "56626b3178214332873f8a277b497e3e", "name": "manila"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://volume-3.foobar.cloud.cluster:443/v1/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "public", "id": "6f338859ed944a10937bee3e2a580f22"},
+        {"region_id": "foobar", "url": "http://cinder-api.foobar.svc.kubernetes.foobar.cloud.cluster:8776/v1/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "internal", "id": "ef38079803a548dfb1937e363b404e23"},
+        {"region_id": "foobar", "url": "http://cinder-api.foobar.svc.kubernetes.foobar.cloud.cluster:8776/v1/6a030751147a45c0863c3b5bde32c744",
+        "region": "foobar", "interface": "admin", "id": "4bf258d657234ceaa573f02cc5203895"}],
+        "type": "volume", "id": "e967f0a7931e49a4b235239f4fc0ed0e", "name": "cinder"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://network-3.foobar.cloud.cluster:443",
+        "region": "foobar", "interface": "public", "id": "12c7b0cb1f804325bd025fb32d8c33e7"},
+        {"region_id": "foobar", "url": "http://neutron-server.foobar.svc.kubernetes.foobar.cloud.cluster:9696",
+        "region": "foobar", "interface": "internal", "id": "a4e60839ebf54e02a6202c164cbc6a6e"},
+        {"region_id": "foobar", "url": "http://neutron-server.foobar.svc.kubernetes.foobar.cloud.cluster:9696",
+        "region": "foobar", "interface": "admin", "id": "9ad2510072024ecf8363c9d18eb4b431"}],
+        "type": "network", "id": "5841d2e972ff44fdb1c789d5261f7318", "name": "neutron"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://dns-3.foobar.cloud.cluster:443",
+        "region": "foobar", "interface": "public", "id": "692e55cfdb704300967c7da0c55a43bb"},
+        {"region_id": "foobar", "url": "http://designate-api.foobar.svc.kubernetes.foobar.cloud.cluster:9001",
+        "region": "foobar", "interface": "internal", "id": "bcfa65f36471406f88b89706274d4465"},
+        {"region_id": "foobar", "url": "http://designate-api.foobar.svc.kubernetes.foobar.cloud.cluster:9001",
+        "region": "foobar", "interface": "admin", "id": "57f2b925603f4541b421bea815001b22"}],
+        "type": "dns", "id": "1010a70e914348b59999eefc25b30e7d", "name": "designate"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://webcli.foobar.cloud.cluster:443",
+        "region": "foobar", "interface": "public", "id": "d60f246367664dc882a38007e3f77232"}],
+        "type": "webcli", "id": "dc9517f106fc4517a3a9181ce5ed2c8d", "name": "webcli"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://cfm.foobar.cloud.cluster:443",
+        "region": "foobar", "interface": "public", "id": "cabb6add42914bfb9c06b70dd6e60303"}],
+        "type": "database", "id": "30d6a9077e6041599918986622e83014", "name": "cfm"},
+        {"endpoints": [{"region_id": "foobar", "url": "https://limes-3.foobar.cloud.cluster",
+        "region": "foobar", "interface": "public", "id": "2a2cc43569c94083a888fc73aeb74f69"}],
+        "type": "resources", "id": "6a61eb04d9bc46e292d7aff87e7628d9", "name": "limes"}],
+        "expires_at": "2017-04-10T19:40:56.000000Z", "user": {"domain": {"id": "ca1b267e149d4e44bf53d28d1c8d6bc9",
+        "name": "foobar"}, "id": "b1b6bf660c3ea2d0aec393431c0e32bf2c673d585c702143b5af87d679e8b371",
+        "name": "foobar"}, "audit_ids": ["gUBp6QYKQyOpVJ6DmRZaWg"], "issued_at":
+        "2017-04-10T11:40:56.000000Z"}}'
+    http_version: 
+  recorded_at: Mon, 10 Apr 2017 11:40:54 GMT
+- request:
+    method: get
+    uri: https://limes-3.foobar.cloud.cluster/v1/domains
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Auth-Token:
+      - gAAAAABY629I7jA-37FQZlTJUC_ZIGzwSFiTYQNxNjOe_QFZ6ovgfsSOSS_OJeLRTwsZa7J2il2w5QejIXSQCMnpeFQCzS9AGWktOhL4G52LTE3lqXy7le2-VVnUKfDV_301aAAC7h_zIzhjxZSkmmFEJSYTIp1oe7Q3xETG1fraSFOy_2Ma1ETLJ0mHD9gkLqfNAXSiFONXruK5AO5yrpCmNP5fQnt7UXcHPRTGSlUAjnXCmCMEPAc
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.11.10
+      Date:
+      - Mon, 10 Apr 2017 11:40:56 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"domains":[{"id":"2ddc08dc830e41a5890d5228195a54b8","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":0,"usage":0},{"name":"instances","quota":0,"projects_quota":0,"usage":0},{"name":"ram","unit":"MiB","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491824189,"min_scraped_at":1491824188},{"type":"dns","resources":[{"name":"recordsets","quota":0,"projects_quota":0,"usage":0},{"name":"zones","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823470,"min_scraped_at":1491823416},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823888,"min_scraped_at":1491823887},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":0,"projects_quota":0,"usage":0},{"name":"snapshots","quota":0,"projects_quota":0,"usage":0},{"name":"volumes","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823946,"min_scraped_at":1491823916}]},{"id":"39a253e16e4a4a3686edca72c8e101bc","services":[{"type":"compute","resources":[{"name":"cores","quota":4096,"projects_quota":902,"usage":220},{"name":"instances","quota":4096,"projects_quota":616,"usage":44},{"name":"ram","unit":"MiB","quota":1048576,"projects_quota":750080,"usage":73472}],"max_scraped_at":1491824186,"min_scraped_at":1491824000},{"type":"dns","resources":[{"name":"recordsets","quota":500,"projects_quota":383,"usage":354,"backend_quota":353},{"name":"zones","quota":20,"projects_quota":12,"usage":8,"backend_quota":6}],"max_scraped_at":1491823851,"min_scraped_at":1491822811},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":12094627905536,"projects_quota":2010817232896,"usage":9417813435}],"max_scraped_at":1491823890,"min_scraped_at":1491823744},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":4096,"projects_quota":1896,"usage":655,"backend_quota":0},{"name":"snapshots","quota":512,"projects_quota":30,"usage":7},{"name":"volumes","quota":512,"projects_quota":150,"usage":20}],"max_scraped_at":1491823914,"min_scraped_at":1491823760}]},{"id":"50939b9249e043c19e6d253663773d8f","services":[{"type":"compute","resources":[{"name":"cores","quota":20,"projects_quota":20,"usage":0},{"name":"instances","quota":0,"projects_quota":20,"usage":0},{"name":"ram","unit":"MiB","quota":0,"projects_quota":51200,"usage":0}],"max_scraped_at":1491824187,"min_scraped_at":1491824186},{"type":"dns","resources":[{"name":"recordsets","quota":0,"projects_quota":0,"usage":0},{"name":"zones","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823201,"min_scraped_at":1491823182},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":1099511627776,"projects_quota":0,"usage":0}],"max_scraped_at":1491823886,"min_scraped_at":1491823886},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":0,"projects_quota":0,"usage":0},{"name":"snapshots","quota":0,"projects_quota":0,"usage":0},{"name":"volumes","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823914,"min_scraped_at":1491823914}]},{"id":"9517ac42e8d148e79bfaea65836023a7","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":0,"usage":0},{"name":"instances","quota":0,"projects_quota":0,"usage":0},{"name":"ram","unit":"MiB","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491824189,"min_scraped_at":1491824188},{"type":"dns","resources":[{"name":"recordsets","quota":0,"projects_quota":0,"usage":0},{"name":"zones","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823461,"min_scraped_at":1491823396},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823888,"min_scraped_at":1491823887},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":0,"projects_quota":0,"usage":0},{"name":"snapshots","quota":0,"projects_quota":0,"usage":0},{"name":"volumes","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823946,"min_scraped_at":1491823916}]},{"id":"a887dbcacbb74db3bc18d27199f0ca63","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":20,"usage":0},{"name":"instances","quota":0,"projects_quota":10,"usage":0},{"name":"ram","unit":"MiB","quota":0,"projects_quota":51200,"usage":0}],"max_scraped_at":1491824187,"min_scraped_at":1491824187},{"type":"dns","resources":[{"name":"recordsets","quota":0,"projects_quota":0,"usage":0},{"name":"zones","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823231,"min_scraped_at":1491823210},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":1099511627776,"projects_quota":0,"usage":0}],"max_scraped_at":1491823886,"min_scraped_at":1491823886},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":0,"projects_quota":0,"usage":0},{"name":"snapshots","quota":0,"projects_quota":0,"usage":0},{"name":"volumes","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823914,"min_scraped_at":1491823914}]},{"id":"ad057491278e4b3798bb2a250a52f69c","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":0,"usage":0},{"name":"instances","quota":0,"projects_quota":0,"usage":0},{"name":"ram","unit":"MiB","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491824189,"min_scraped_at":1491824188},{"type":"dns","resources":[{"name":"recordsets","quota":0,"projects_quota":0,"usage":0},{"name":"zones","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823442,"min_scraped_at":1491823355},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823887,"min_scraped_at":1491823887},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":0,"projects_quota":0,"usage":0},{"name":"snapshots","quota":0,"projects_quota":0,"usage":0},{"name":"volumes","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823926,"min_scraped_at":1491823915}]},{"id":"ca1b267e149d4e44bf53d28d1c8d6bc9","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":50,"usage":10},{"name":"instances","quota":0,"projects_quota":30,"usage":5},{"name":"ram","unit":"MiB","quota":0,"projects_quota":30720,"usage":10240}],"max_scraped_at":1491824101,"min_scraped_at":1491824091},{"type":"dns","resources":[{"name":"recordsets","quota":1000,"projects_quota":500,"usage":98},{"name":"zones","quota":20,"projects_quota":20,"usage":4}],"max_scraped_at":1491823636,"min_scraped_at":1491823521},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":5497558138880,"projects_quota":5566292815872,"usage":1545668867679}],"max_scraped_at":1491823888,"min_scraped_at":1491823888},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":0,"projects_quota":513,"usage":122,"backend_quota":0},{"name":"snapshots","quota":0,"projects_quota":2,"usage":0},{"name":"volumes","quota":0,"projects_quota":35,"usage":6}],"max_scraped_at":1491823901,"min_scraped_at":1491823900}]},{"id":"d247861f96094b689d1b358513638296","services":[{"type":"compute","resources":[{"name":"cores","quota":100,"projects_quota":40,"usage":14},{"name":"instances","quota":50,"projects_quota":35,"usage":14},{"name":"ram","unit":"MiB","quota":3145728,"projects_quota":10240,"usage":8704}],"max_scraped_at":1491824189,"min_scraped_at":1491823800},{"type":"dns","resources":[{"name":"recordsets","quota":100,"projects_quota":0,"usage":0},{"name":"zones","quota":1,"projects_quota":0,"usage":0}],"max_scraped_at":1491823862,"min_scraped_at":1491823240},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":1099511627776,"projects_quota":6550412554,"usage":5200618}],"max_scraped_at":1491823888,"min_scraped_at":1491823795},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":10240,"projects_quota":60,"usage":0,"backend_quota":0},{"name":"snapshots","quota":100,"projects_quota":20,"usage":0},{"name":"volumes","quota":100,"projects_quota":35,"usage":0}],"max_scraped_at":1491823916,"min_scraped_at":1491823790}]},{"id":"d2db2e09fe084d7ea5853eb7398a4488","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":0,"usage":0},{"name":"instances","quota":0,"projects_quota":0,"usage":0},{"name":"ram","unit":"MiB","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491824189,"min_scraped_at":1491824188},{"type":"dns","resources":[{"name":"recordsets","quota":0,"projects_quota":0,"usage":0},{"name":"zones","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823451,"min_scraped_at":1491823376},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823887,"min_scraped_at":1491823887},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":0,"projects_quota":0,"usage":0},{"name":"snapshots","quota":0,"projects_quota":0,"usage":0},{"name":"volumes","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823936,"min_scraped_at":1491823916}]},{"id":"default","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":80,"usage":5},{"name":"instances","quota":0,"projects_quota":40,"usage":5},{"name":"ram","unit":"MiB","quota":0,"projects_quota":204800,"usage":2560}],"max_scraped_at":1491824102,"min_scraped_at":1491824101},{"type":"dns","resources":[{"name":"recordsets","quota":0,"projects_quota":1600,"usage":4},{"name":"zones","quota":0,"projects_quota":1,"usage":1}],"max_scraped_at":1491823707,"min_scraped_at":1491823657},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491823888,"min_scraped_at":1491823888},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":0,"projects_quota":4000,"usage":0,"backend_quota":0},{"name":"snapshots","quota":0,"projects_quota":40,"usage":0},{"name":"volumes","quota":0,"projects_quota":40,"usage":0}],"max_scraped_at":1491823901,"min_scraped_at":1491823901}]}]}'
+    http_version: 
+  recorded_at: Mon, 10 Apr 2017 11:40:54 GMT
+- request:
+    method: get
+    uri: https://limes-3.foobar.cloud.cluster/v1/domains?service=compute
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Auth-Token:
+      - gAAAAABY629I7jA-37FQZlTJUC_ZIGzwSFiTYQNxNjOe_QFZ6ovgfsSOSS_OJeLRTwsZa7J2il2w5QejIXSQCMnpeFQCzS9AGWktOhL4G52LTE3lqXy7le2-VVnUKfDV_301aAAC7h_zIzhjxZSkmmFEJSYTIp1oe7Q3xETG1fraSFOy_2Ma1ETLJ0mHD9gkLqfNAXSiFONXruK5AO5yrpCmNP5fQnt7UXcHPRTGSlUAjnXCmCMEPAc
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.11.10
+      Date:
+      - Mon, 10 Apr 2017 11:40:56 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"domains":[{"id":"2ddc08dc830e41a5890d5228195a54b8","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":0,"usage":0},{"name":"instances","quota":0,"projects_quota":0,"usage":0},{"name":"ram","unit":"MiB","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491824189,"min_scraped_at":1491824188}]},{"id":"39a253e16e4a4a3686edca72c8e101bc","services":[{"type":"compute","resources":[{"name":"cores","quota":4096,"projects_quota":902,"usage":220},{"name":"instances","quota":4096,"projects_quota":616,"usage":44},{"name":"ram","unit":"MiB","quota":1048576,"projects_quota":750080,"usage":73472}],"max_scraped_at":1491824186,"min_scraped_at":1491824000}]},{"id":"50939b9249e043c19e6d253663773d8f","services":[{"type":"compute","resources":[{"name":"cores","quota":20,"projects_quota":20,"usage":0},{"name":"instances","quota":0,"projects_quota":20,"usage":0},{"name":"ram","unit":"MiB","quota":0,"projects_quota":51200,"usage":0}],"max_scraped_at":1491824187,"min_scraped_at":1491824186}]},{"id":"9517ac42e8d148e79bfaea65836023a7","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":0,"usage":0},{"name":"instances","quota":0,"projects_quota":0,"usage":0},{"name":"ram","unit":"MiB","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491824189,"min_scraped_at":1491824188}]},{"id":"a887dbcacbb74db3bc18d27199f0ca63","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":20,"usage":0},{"name":"instances","quota":0,"projects_quota":10,"usage":0},{"name":"ram","unit":"MiB","quota":0,"projects_quota":51200,"usage":0}],"max_scraped_at":1491824187,"min_scraped_at":1491824187}]},{"id":"ad057491278e4b3798bb2a250a52f69c","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":0,"usage":0},{"name":"instances","quota":0,"projects_quota":0,"usage":0},{"name":"ram","unit":"MiB","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491824189,"min_scraped_at":1491824188}]},{"id":"ca1b267e149d4e44bf53d28d1c8d6bc9","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":50,"usage":10},{"name":"instances","quota":0,"projects_quota":30,"usage":5},{"name":"ram","unit":"MiB","quota":0,"projects_quota":30720,"usage":10240}],"max_scraped_at":1491824101,"min_scraped_at":1491824091}]},{"id":"d247861f96094b689d1b358513638296","services":[{"type":"compute","resources":[{"name":"cores","quota":100,"projects_quota":40,"usage":14},{"name":"instances","quota":50,"projects_quota":35,"usage":14},{"name":"ram","unit":"MiB","quota":3145728,"projects_quota":10240,"usage":8704}],"max_scraped_at":1491824189,"min_scraped_at":1491823800}]},{"id":"d2db2e09fe084d7ea5853eb7398a4488","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":0,"usage":0},{"name":"instances","quota":0,"projects_quota":0,"usage":0},{"name":"ram","unit":"MiB","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491824189,"min_scraped_at":1491824188}]},{"id":"default","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":80,"usage":5},{"name":"instances","quota":0,"projects_quota":40,"usage":5},{"name":"ram","unit":"MiB","quota":0,"projects_quota":204800,"usage":2560}],"max_scraped_at":1491824102,"min_scraped_at":1491824101}]}]}'
+    http_version: 
+  recorded_at: Mon, 10 Apr 2017 11:40:54 GMT
+- request:
+    method: get
+    uri: https://limes-3.foobar.cloud.cluster/v1/domains?resource=cores&service=compute
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Auth-Token:
+      - gAAAAABY629I7jA-37FQZlTJUC_ZIGzwSFiTYQNxNjOe_QFZ6ovgfsSOSS_OJeLRTwsZa7J2il2w5QejIXSQCMnpeFQCzS9AGWktOhL4G52LTE3lqXy7le2-VVnUKfDV_301aAAC7h_zIzhjxZSkmmFEJSYTIp1oe7Q3xETG1fraSFOy_2Ma1ETLJ0mHD9gkLqfNAXSiFONXruK5AO5yrpCmNP5fQnt7UXcHPRTGSlUAjnXCmCMEPAc
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.11.10
+      Date:
+      - Mon, 10 Apr 2017 11:40:56 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"domains":[{"id":"2ddc08dc830e41a5890d5228195a54b8","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491824189,"min_scraped_at":1491824188}]},{"id":"39a253e16e4a4a3686edca72c8e101bc","services":[{"type":"compute","resources":[{"name":"cores","quota":4096,"projects_quota":902,"usage":220}],"max_scraped_at":1491824186,"min_scraped_at":1491824000}]},{"id":"50939b9249e043c19e6d253663773d8f","services":[{"type":"compute","resources":[{"name":"cores","quota":20,"projects_quota":20,"usage":0}],"max_scraped_at":1491824187,"min_scraped_at":1491824186}]},{"id":"9517ac42e8d148e79bfaea65836023a7","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491824189,"min_scraped_at":1491824188}]},{"id":"a887dbcacbb74db3bc18d27199f0ca63","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":20,"usage":0}],"max_scraped_at":1491824187,"min_scraped_at":1491824187}]},{"id":"ad057491278e4b3798bb2a250a52f69c","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491824189,"min_scraped_at":1491824188}]},{"id":"ca1b267e149d4e44bf53d28d1c8d6bc9","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":50,"usage":10}],"max_scraped_at":1491824101,"min_scraped_at":1491824091}]},{"id":"d247861f96094b689d1b358513638296","services":[{"type":"compute","resources":[{"name":"cores","quota":100,"projects_quota":40,"usage":14}],"max_scraped_at":1491824189,"min_scraped_at":1491823800}]},{"id":"d2db2e09fe084d7ea5853eb7398a4488","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":0,"usage":0}],"max_scraped_at":1491824189,"min_scraped_at":1491824188}]},{"id":"default","services":[{"type":"compute","resources":[{"name":"cores","quota":0,"projects_quota":80,"usage":5}],"max_scraped_at":1491824102,"min_scraped_at":1491824101}]}]}'
+    http_version: 
+  recorded_at: Mon, 10 Apr 2017 11:40:54 GMT
+- request:
+    method: post
+    uri: https://limes-3.foobar.cloud.cluster/v1/domains/discover
+    body:
+      encoding: UTF-8
+      string: 'null'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Auth-Token:
+      - gAAAAABY629I7jA-37FQZlTJUC_ZIGzwSFiTYQNxNjOe_QFZ6ovgfsSOSS_OJeLRTwsZa7J2il2w5QejIXSQCMnpeFQCzS9AGWktOhL4G52LTE3lqXy7le2-VVnUKfDV_301aAAC7h_zIzhjxZSkmmFEJSYTIp1oe7Q3xETG1fraSFOy_2Ma1ETLJ0mHD9gkLqfNAXSiFONXruK5AO5yrpCmNP5fQnt7UXcHPRTGSlUAjnXCmCMEPAc
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - nginx/1.11.10
+      Date:
+      - Mon, 10 Apr 2017 11:40:56 GMT
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 10 Apr 2017 11:40:55 GMT
+recorded_with: VCR 3.0.3
