@@ -95,9 +95,9 @@ describe "limes features" do
                     ]
                   }
 
-      response = cloud.resources.set_quota_for_domain(ENV["TEST_DOMAIN_ID"], "domain" => new_quota)
-      #TODO -> TEST
-      
+      response = cloud.resources.set_quota_for_domain_project(ENV["TEST_DOMAIN_ID"],ENV["TEST_PROJECT_ID"],"project" => new_quota)
+      response.code.must_equal "200"
+
       response = cloud.resources.discover_domain_projects(ENV["TEST_DOMAIN_ID"])
       response.code.must_equal "204"
 
