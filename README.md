@@ -81,8 +81,8 @@ cloud.resources.set_quota_for_domain("DOMAIN_ID", "domain" => new_quota)
 2. RUN gem install bundler
 3. Run `bundle install --with=development`
 4. Run the tests
-    1. You need to set your env variables first, take a look to the dotenv file (TODO: use dotenv)
-    1. `bundle exec rake limes`
+    1. rename dotenv to .env and run `bundle exec rake limes`
+    2. Note: if you need to rerun the tests without vcr tapes you need to set your env variables first, take a look to the dotenv file
 
 ## License
 

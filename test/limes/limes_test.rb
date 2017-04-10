@@ -8,7 +8,7 @@ describe "limes features" do
   it "GET requests project resources" do
     VCR.use_cassette "requesting project resources using api V1" do
       
-      cloud = Misty::Cloud.new(:auth => auth_project, :region_id => "staging", :log_level => 2, :ssl_verify_mode => false)
+      cloud = Misty::Cloud.new(:auth => auth_project, :region_id => ENV["TEST_REGION_ID"], :log_level => 2, :ssl_verify_mode => false)
       
       services = cloud.services
       services[:resources][:limes].must_equal "v1"
@@ -47,7 +47,7 @@ describe "limes features" do
   it "GET requests domain resources" do
     VCR.use_cassette "requesting domain resources using api V1" do
       
-      cloud = Misty::Cloud.new(:auth => auth_domain, :region_id => "staging", :log_level => 2, :ssl_verify_mode => false)
+      cloud = Misty::Cloud.new(:auth => auth_domain, :region_id => ENV["TEST_REGION_ID"], :log_level => 2, :ssl_verify_mode => false)
       
       services = cloud.services
       services[:resources][:limes].must_equal "v1"
@@ -107,7 +107,7 @@ describe "limes features" do
   it "GET requests domains resources" do
     VCR.use_cassette "requesting domains resources using api V1" do
       
-      cloud = Misty::Cloud.new(:auth => auth_cloud_admin, :region_id => "staging", :log_level => 2, :ssl_verify_mode => false)
+      cloud = Misty::Cloud.new(:auth => auth_cloud_admin, :region_id => ENV["TEST_REGION_ID"], :log_level => 2, :ssl_verify_mode => false)
       services = cloud.services
       services[:resources][:limes].must_equal "v1"
       
@@ -142,7 +142,7 @@ describe "limes features" do
   it "GET requests cluster resources" do
     VCR.use_cassette "requesting cluster resources using api V1" do
       
-      cloud = Misty::Cloud.new(:auth => auth_cloud_admin, :region_id => "staging", :log_level => 2, :ssl_verify_mode => false)
+      cloud = Misty::Cloud.new(:auth => auth_cloud_admin, :region_id => ENV["TEST_REGION_ID"], :log_level => 2, :ssl_verify_mode => false)
       services = cloud.services
       services[:resources][:limes].must_equal "v1"
       
@@ -177,7 +177,7 @@ describe "limes features" do
   it "GET requests clusters resources" do
     VCR.use_cassette "requesting clusters resources using api V1" do
       
-      cloud = Misty::Cloud.new(:auth => auth_cloud_admin, :region_id => "staging", :log_level => 2, :ssl_verify_mode => false)
+      cloud = Misty::Cloud.new(:auth => auth_cloud_admin, :region_id => ENV["TEST_REGION_ID"], :log_level => 2, :ssl_verify_mode => false)
       services = cloud.services
       services[:resources][:limes].must_equal "v1"
       
