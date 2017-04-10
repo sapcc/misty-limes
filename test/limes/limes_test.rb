@@ -13,32 +13,32 @@ describe "limes features" do
       services = cloud.services
       services[:resources][:limes].must_equal "v1"
       
-      response = cloud.resources.get_project("d247861f96094b689d1b358513638296","2b121dc9245c4a4bae5ffa494b586be8")
+      response = cloud.resources.get_project(ENV["TEST_DOMAIN_ID"],ENV["TEST_PROJECT_ID"])
       response.code.must_equal "200"
-      assert_equal "2b121dc9245c4a4bae5ffa494b586be8", response.body["project"]["id"], "check for project id"
-      assert_equal "object-store", response.body["project"]["services"][1]["type"], "check for service  object-store"
-      assert_equal "capacity", response.body["project"]["services"][1]["resources"][0]["name"], "check for resource capacity"
-      assert_equal "B", response.body["project"]["services"][1]["resources"][0]["unit"], "check resource unit"
-      assert_kind_of Integer, response.body["project"]["services"][1]["resources"][0]["quota"], "check resource quota"
-      assert_kind_of Integer, response.body["project"]["services"][1]["resources"][0]["usage"], "check resource usage"
+      assert_equal ENV["TEST_PROJECT_ID"], response.body["project"]["id"], "check for project id"
+      assert_equal "object-store", response.body["project"]["services"][2]["type"], "check for service  object-store"
+      assert_equal "capacity", response.body["project"]["services"][2]["resources"][0]["name"], "check for resource capacity"
+      assert_equal "B", response.body["project"]["services"][2]["resources"][0]["unit"], "check resource unit"
+      assert_kind_of Integer, response.body["project"]["services"][2]["resources"][0]["quota"], "check resource quota"
+      assert_kind_of Integer, response.body["project"]["services"][2]["resources"][0]["usage"], "check resource usage"
       
-      response = cloud.resources.get_service_for_project("d247861f96094b689d1b358513638296","2b121dc9245c4a4bae5ffa494b586be8","compute")
+      response = cloud.resources.get_service_for_project(ENV["TEST_DOMAIN_ID"],ENV["TEST_PROJECT_ID"],"compute")
       response.code.must_equal "200"
-      assert_equal "2b121dc9245c4a4bae5ffa494b586be8", response.body["project"]["id"], "check for project id"
+      assert_equal ENV["TEST_PROJECT_ID"], response.body["project"]["id"], "check for project id"
       assert_equal "compute", response.body["project"]["services"][0]["type"], "check for service  compute"
       assert_equal "instances", response.body["project"]["services"][0]["resources"][1]["name"], "check for resource instances"
       assert_kind_of Integer, response.body["project"]["services"][0]["resources"][1]["quota"], "check resource quota"
       assert_kind_of Integer, response.body["project"]["services"][0]["resources"][1]["usage"], "check resource usage"
 
-      response = cloud.resources.get_service_resource_for_project("d247861f96094b689d1b358513638296","2b121dc9245c4a4bae5ffa494b586be8","compute","cores")
+      response = cloud.resources.get_service_resource_for_project(ENV["TEST_DOMAIN_ID"],ENV["TEST_PROJECT_ID"],"compute","cores")
       response.code.must_equal "200"
-      assert_equal "2b121dc9245c4a4bae5ffa494b586be8", response.body["project"]["id"], "check for project id"
+      assert_equal ENV["TEST_PROJECT_ID"], response.body["project"]["id"], "check for project id"
       assert_equal "compute", response.body["project"]["services"][0]["type"], "check for service  compute"
       assert_equal "cores", response.body["project"]["services"][0]["resources"][0]["name"], "check for resource cores"
       assert_kind_of Integer, response.body["project"]["services"][0]["resources"][0]["quota"], "check resource quota"
       assert_kind_of Integer, response.body["project"]["services"][0]["resources"][0]["usage"], "check resource usage"
 
-      response = cloud.resources.sync_project("d247861f96094b689d1b358513638296","2b121dc9245c4a4bae5ffa494b586be8")
+      response = cloud.resources.sync_project(ENV["TEST_DOMAIN_ID"],ENV["TEST_PROJECT_ID"])
       response.code.must_equal "202"
 
     end
@@ -52,26 +52,26 @@ describe "limes features" do
       services = cloud.services
       services[:resources][:limes].must_equal "v1"
       
-      response = cloud.resources.get_domain("d247861f96094b689d1b358513638296")
+      response = cloud.resources.get_domain(ENV["TEST_DOMAIN_ID"])
       response.code.must_equal "200"
-      assert_equal "d247861f96094b689d1b358513638296", response.body["domain"]["id"], "check for domain id"
-      assert_equal "object-store", response.body["domain"]["services"][1]["type"], "check for service  object-store"
-      assert_equal "capacity", response.body["domain"]["services"][1]["resources"][0]["name"], "check for resource capacity"
-      assert_equal "B", response.body["domain"]["services"][1]["resources"][0]["unit"], "check resource unit"
-      assert_kind_of Integer, response.body["domain"]["services"][1]["resources"][0]["quota"], "check resource quota"
-      assert_kind_of Integer, response.body["domain"]["services"][1]["resources"][0]["usage"], "check resource usage"
+      assert_equal ENV["TEST_DOMAIN_ID"], response.body["domain"]["id"], "check for domain id"
+      assert_equal "object-store", response.body["domain"]["services"][2]["type"], "check for service  object-store"
+      assert_equal "capacity", response.body["domain"]["services"][2]["resources"][0]["name"], "check for resource capacity"
+      assert_equal "B", response.body["domain"]["services"][2]["resources"][0]["unit"], "check resource unit"
+      assert_kind_of Integer, response.body["domain"]["services"][2]["resources"][0]["quota"], "check resource quota"
+      assert_kind_of Integer, response.body["domain"]["services"][2]["resources"][0]["usage"], "check resource usage"
 
-      response = cloud.resources.get_service_for_domain("d247861f96094b689d1b358513638296","compute")
+      response = cloud.resources.get_service_for_domain(ENV["TEST_DOMAIN_ID"],"compute")
       response.code.must_equal "200"
-      assert_equal "d247861f96094b689d1b358513638296", response.body["domain"]["id"], "check for domain id"
+      assert_equal ENV["TEST_DOMAIN_ID"], response.body["domain"]["id"], "check for domain id"
       assert_equal "compute", response.body["domain"]["services"][0]["type"], "check for service  compute"
       assert_equal "instances", response.body["domain"]["services"][0]["resources"][1]["name"], "check for resource instances"
       assert_kind_of Integer, response.body["domain"]["services"][0]["resources"][1]["quota"], "check resource quota"
       assert_kind_of Integer, response.body["domain"]["services"][0]["resources"][1]["usage"], "check resource usage"
       
-      response = cloud.resources.get_service_resource_for_domain("d247861f96094b689d1b358513638296","compute","cores")
+      response = cloud.resources.get_service_resource_for_domain(ENV["TEST_DOMAIN_ID"],"compute","cores")
       response.code.must_equal "200"
-      assert_equal "d247861f96094b689d1b358513638296", response.body["domain"]["id"], "check for domain id"
+      assert_equal ENV["TEST_DOMAIN_ID"], response.body["domain"]["id"], "check for domain id"
       assert_equal "compute", response.body["domain"]["services"][0]["type"], "check for service  compute"
       assert_equal "cores", response.body["domain"]["services"][0]["resources"][0]["name"], "check for resource cores"
       assert_kind_of Integer, response.body["domain"]["services"][0]["resources"][0]["quota"], "check resource quota"
@@ -95,10 +95,10 @@ describe "limes features" do
                     ]
                   }
 
-      response = cloud.resources.set_quota_for_domain("d247861f96094b689d1b358513638296", "domain" => new_quota)
+      response = cloud.resources.set_quota_for_domain(ENV["TEST_DOMAIN_ID"], "domain" => new_quota)
       #TODO -> TEST
       
-      response = cloud.resources.discover_domain_projects("d247861f96094b689d1b358513638296")
+      response = cloud.resources.discover_domain_projects(ENV["TEST_DOMAIN_ID"])
       response.code.must_equal "204"
 
     end
@@ -113,11 +113,11 @@ describe "limes features" do
       
       response = cloud.resources.get_domains
       response.code.must_equal "200"
-      assert_equal "object-store", response.body["domains"][0]["services"][1]["type"], "check for service  object-store"
-      assert_equal "capacity", response.body["domains"][0]["services"][1]["resources"][0]["name"], "check for resource capacity"
-      assert_equal "B", response.body["domains"][0]["services"][1]["resources"][0]["unit"], "check resource unit"
-      assert_kind_of Integer, response.body["domains"][0]["services"][1]["resources"][0]["quota"], "check resource quota"
-      assert_kind_of Integer, response.body["domains"][0]["services"][1]["resources"][0]["usage"], "check resource usage"
+      assert_equal "object-store", response.body["domains"][0]["services"][2]["type"], "check for service  object-store"
+      assert_equal "capacity", response.body["domains"][0]["services"][2]["resources"][0]["name"], "check for resource capacity"
+      assert_equal "B", response.body["domains"][0]["services"][2]["resources"][0]["unit"], "check resource unit"
+      assert_kind_of Integer, response.body["domains"][0]["services"][2]["resources"][0]["quota"], "check resource quota"
+      assert_kind_of Integer, response.body["domains"][0]["services"][2]["resources"][0]["usage"], "check resource usage"
       
       response = cloud.resources.get_service_for_domains("compute")
       response.code.must_equal "200"
@@ -149,11 +149,11 @@ describe "limes features" do
       response = cloud.resources.get_cluster("ccloud")
       response.code.must_equal "200"
       assert_equal "ccloud", response.body["cluster"]["id"], "check for cluster id"
-      assert_equal "object-store", response.body["cluster"]["services"][1]["type"], "check for service  object-store"
-      assert_equal "capacity", response.body["cluster"]["services"][1]["resources"][0]["name"], "check for resource capacity"
-      assert_equal "B", response.body["cluster"]["services"][1]["resources"][0]["unit"], "check resource unit"
-      assert_kind_of Integer, response.body["cluster"]["services"][1]["resources"][0]["domains_quota"], "check resource quota"
-      assert_kind_of Integer, response.body["cluster"]["services"][1]["resources"][0]["usage"], "check resource usage"
+      assert_equal "object-store", response.body["cluster"]["services"][2]["type"], "check for service  object-store"
+      assert_equal "capacity", response.body["cluster"]["services"][2]["resources"][0]["name"], "check for resource capacity"
+      assert_equal "B", response.body["cluster"]["services"][2]["resources"][0]["unit"], "check resource unit"
+      assert_kind_of Integer, response.body["cluster"]["services"][2]["resources"][0]["domains_quota"], "check resource quota"
+      assert_kind_of Integer, response.body["cluster"]["services"][2]["resources"][0]["usage"], "check resource usage"
 
       response = cloud.resources.get_service_for_cluster("ccloud","compute")
       response.code.must_equal "200"
@@ -183,11 +183,11 @@ describe "limes features" do
       
       response = cloud.resources.get_clusters
       response.code.must_equal "200"
-      assert_equal "object-store", response.body["clusters"][0]["services"][1]["type"], "check for service  object-store"
-      assert_equal "capacity", response.body["clusters"][0]["services"][1]["resources"][0]["name"], "check for resource capacity"
-      assert_equal "B", response.body["clusters"][0]["services"][1]["resources"][0]["unit"], "check resource unit"
-      assert_kind_of Integer, response.body["clusters"][0]["services"][1]["resources"][0]["domains_quota"], "check resource quota"
-      assert_kind_of Integer, response.body["clusters"][0]["services"][1]["resources"][0]["usage"], "check resource usage"
+      assert_equal "object-store", response.body["clusters"][0]["services"][2]["type"], "check for service  object-store"
+      assert_equal "capacity", response.body["clusters"][0]["services"][2]["resources"][0]["name"], "check for resource capacity"
+      assert_equal "B", response.body["clusters"][0]["services"][2]["resources"][0]["unit"], "check resource unit"
+      assert_kind_of Integer, response.body["clusters"][0]["services"][2]["resources"][0]["domains_quota"], "check resource quota"
+      assert_kind_of Integer, response.body["clusters"][0]["services"][2]["resources"][0]["usage"], "check resource usage"
 
       response = cloud.resources.get_service_for_clusters("compute")
       response.code.must_equal "200"
