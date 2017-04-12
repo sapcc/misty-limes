@@ -1,6 +1,7 @@
 module Misty::Openstack::LimesV1
   def v1
     {
+      # https://github.com/sapcc/limes/blob/master/docs/design/002-public-api.md
       # Note: the query string is the last parameter and automatically added if existing
       # without query string
       # cloud.resources.get_domain(ENV["TEST_DOMAIN_ID"])
