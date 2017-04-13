@@ -27,7 +27,7 @@ require 'misty/openstack/limes'
 ## Usage
 
 ```ruby
-require ''misty/openstack/limes'
+require 'misty/openstack/limes'
 
 auth_v3 = {
   :url              => "http://localhost:5000",
