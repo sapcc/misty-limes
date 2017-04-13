@@ -22,7 +22,6 @@ Gem::Specification.new do |spec|
   spec.rdoc_options = ['--charset=UTF-8']
   spec.extra_rdoc_files = %w[README.md LICENSE.md]
 
-  # use our own fork see Gemfile
   spec.add_dependency 'misty', '>= 0.5.0'
 
   spec.add_development_dependency 'bundler',    '~> 1.10'

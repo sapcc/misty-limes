@@ -13,6 +13,7 @@ module Misty::Openstack::LimesV1
       "/v1/domains" => {:GET=>[:get_domains]},
       "/v1/domains/{domain_id}" => {:GET=>[:get_domain], :PUT=>[:set_quota_for_domain]},
       "/v1/domains/{domain_id}/projects/{project_id}" => {:GET=>[:get_project], :PUT=>[:set_quota_for_domain_project]},
+      "/v1/domains/{domain_id}/projects" => {:GET=>[:get_projects]},
       
       "/v1/domains/discover" => {:POST=>[:discover_domains]},
       "/v1/domains/{domain_id}/projects/discover" => {:POST=>[:discover_domain_projects]},

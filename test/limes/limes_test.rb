@@ -5,6 +5,7 @@ require 'misty/openstack/limes'
 # https://github.com/sapcc/limes/blob/master/docs/design/002-public-api.md
 
 describe "limes features" do
+
   it "GET requests project resources" do
     VCR.use_cassette "requesting project resources using api V1" do
       
@@ -34,6 +35,35 @@ describe "limes features" do
 
       response = cloud.resources.sync_project(ENV["TEST_DOMAIN_ID"],ENV["TEST_PROJECT_ID"])
       response.code.must_equal "202"
+
+    end
+  end
+
+  it "GET requests project resources" do
+    VCR.use_cassette "requesting projects resources using api V1" do
+      
+      cloud = Misty::Cloud.new(:auth => auth_domain, :region_id => ENV["TEST_REGION_ID"], :log_level => 2, :ssl_verify_mode => false)
+      
+      services = cloud.services
+      services[:resources][:limes].must_equal "v1"
+      
+      response = cloud.resources.get_projects(ENV["TEST_DOMAIN_ID"])
+      response.code.must_equal "200"
+      assert_equal "object-store", response.body["projects"][0]["services"][2]["type"], "check for service  object-store"
+      assert_equal "capacity", response.body["projects"][0]["services"][2]["resources"][0]["name"], "check for resource capacity"
+      assert_equal "B", response.body["projects"][0]["services"][2]["resources"][0]["unit"], "check resource unit"
+      assert_kind_of Integer, response.body["projects"][0]["services"][2]["resources"][0]["quota"], "check resource quota"
+      assert_kind_of Integer, response.body["projects"][0]["services"][2]["resources"][0]["usage"], "check resource usage"
+      
+      response = cloud.resources.get_projects(ENV["TEST_DOMAIN_ID"],"resource=cores&service=compute&resource=ram")
+      response.code.must_equal "200"
+      assert_equal "compute", response.body["projects"][0]["services"][0]["type"], "check for service  compute"
+      assert_equal "cores", response.body["projects"][0]["services"][0]["resources"][0]["name"], "check for resource cores"
+      assert_kind_of Integer, response.body["projects"][0]["services"][0]["resources"][0]["quota"], "check resource quota"
+      assert_kind_of Integer, response.body["projects"][0]["services"][0]["resources"][0]["usage"], "check resource usage"
+      assert_equal "ram", response.body["projects"][0]["services"][0]["resources"][1]["name"], "check for resource ram"
+      assert_kind_of Integer, response.body["projects"][0]["services"][0]["resources"][1]["quota"], "check resource quota"
+      assert_kind_of Integer, response.body["projects"][0]["services"][0]["resources"][1]["usage"], "check resource usage"
 
     end
   end
