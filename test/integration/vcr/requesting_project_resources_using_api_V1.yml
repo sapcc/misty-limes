@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 08:32:55 GMT
+      - Tue, 18 Apr 2017 11:58:11 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -31,11 +31,11 @@ http_interactions:
       Connection:
       - keep-alive
       X-Subject-Token:
-      - gAAAAABY9c83O4FI7NVeB9898XaO9A7HBC4NM2HQkIdYpFbbDwiMfZs5_E1k5DPkh6t3yUI7zgn0UVtdAFpsoYd_RZxNLmRWXk1eOuPQgu_iav9I2Xo0_vAtDhH9_lizo1G7z3k_4vAfdG4_DxMwh-gZI2I5nTYwX1lnT08qVs7jlmJVyH6o0aVWFVEsWV_RgGdMGIU7-9zZIL8cXUSg2M3eoWvJjHMsQ-lBD56DXe6_Ozgu4uOfPKI
+      - gAAAAABY9f9TEwoJjH6AQmYGzr9v-bYxthjNxoJxX9syG1NPqO6S4Em7YM877kbYIIHB4hLsWYVLuV3HOicq2VPakEwtN2KaCd4eE5fUNOMEzwI1sI4WAodZ1KwG8Lw6gKTBXZ7xEqrHiqZme3vtF3zhTVm-PMRncYX6DlqPMWMIwQgPgGE2Ch7DTRY-Xdd8Yg4UYxzJwQPnwZ2gFDnKDGegCVlRja_AQOYuN23fxx6GqNepkc4KuLQ
       Vary:
       - X-Auth-Token
       X-Openstack-Request-Id:
-      - req-461d3c7c-fd43-4e90-a96a-97b2f44d2c65
+      - req-e1b26947-d62a-467e-ab38-35eddc79111f
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains; preload
     body:
@@ -43,130 +43,130 @@ http_interactions:
       string: '{"token": {"methods": ["password"], "roles": [{"id": "d1c1cd5484214574bb4fbc6595def9a6",
         "name": "admin"}, {"id": "6ee048ff73234dfd8ffe5e6c9fefd117", "name": "network_admin"},
         {"id": "df6f218971184020af05a9788ca4c0b9", "name": "member"}], "expires_at":
-        "2017-04-18T16:32:55.000000Z", "project": {"domain": {"id": "d247861f96094b689d1b358513638296",
+        "2017-04-18T19:58:11.000000Z", "project": {"domain": {"id": "d247861f96094b689d1b358513638296",
         "name": "foobar"}, "id": "749899ac305441a086478b40eb4c18cd", "name": "limes-test"},
-        "catalog": [{"endpoints": [{"region_id": "foobar", "url": "https://share-3.foobar.cloud.cluster:443/v2/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "public", "id": "2f0623e5f9204d83931fd57a1fdb1123"},
-        {"region_id": "foobar", "url": "http://manila-api.openstack.svc.kubernetes.foobar.cloud.cluster:8786/v2/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "internal", "id": "988f5ca2e8de446db6a36f54045efeac"},
-        {"region_id": "foobar", "url": "http://manila-api.openstack.svc.kubernetes.foobar.cloud.cluster:8786/v2/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "admin", "id": "127042e3843d4fb9b62a79633f95ba15"}],
+        "catalog": [{"endpoints": [{"url": "https://share-3.foobar.cloud.cluster:443/v2/749899ac305441a086478b40eb4c18cd",
+        "interface": "public", "region": "foobar", "region_id": "foobar", "id":
+        "2f0623e5f9204d83931fd57a1fdb1123"}, {"url": "http://manila-api.openstack.svc.kubernetes.foobar.cloud.cluster:8786/v2/749899ac305441a086478b40eb4c18cd",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "988f5ca2e8de446db6a36f54045efeac"}, {"url": "http://manila-api.openstack.svc.kubernetes.foobar.cloud.cluster:8786/v2/749899ac305441a086478b40eb4c18cd",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "127042e3843d4fb9b62a79633f95ba15"}],
         "type": "sharev2", "id": "999ab682b1da4982ac2eaa6d16e2f620", "name": "manilav2"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://arc.foobar.cloud.cluster",
-        "region": "foobar", "interface": "public", "id": "54a9c567c4be4fa7835133b024f8923f"}],
+        {"endpoints": [{"url": "https://arc.foobar.cloud.cluster", "interface": "public",
+        "region": "foobar", "region_id": "foobar", "id": "54a9c567c4be4fa7835133b024f8923f"}],
         "type": "arc", "id": "eb6ff7bc28d04a2783f665f011d6df62", "name": "Arc"}, {"endpoints":
-        [{"region_id": "foobar", "url": "http://ironic-api.openstack.svc.kubernetes.foobar.cloud.cluster:6385",
-        "region": "foobar", "interface": "internal", "id": "d6fa2fe8b1fa434b883fe3328fbdbda5"},
-        {"region_id": "foobar", "url": "https://baremetal-3.foobar.cloud.cluster:443",
-        "region": "foobar", "interface": "public", "id": "316493ea520142ca98dd3e1d30beb7b5"},
-        {"region_id": "foobar", "url": "http://ironic-api.openstack.svc.kubernetes.foobar.cloud.cluster:6385",
-        "region": "foobar", "interface": "admin", "id": "0a97f39ddae1412e97a5f21b4432e9a8"}],
+        [{"url": "http://ironic-api.openstack.svc.kubernetes.foobar.cloud.cluster:6385",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "d6fa2fe8b1fa434b883fe3328fbdbda5"}, {"url": "https://baremetal-3.foobar.cloud.cluster:443",
+        "interface": "public", "region": "foobar", "region_id": "foobar", "id":
+        "316493ea520142ca98dd3e1d30beb7b5"}, {"url": "http://ironic-api.openstack.svc.kubernetes.foobar.cloud.cluster:6385",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "0a97f39ddae1412e97a5f21b4432e9a8"}],
         "type": "baremetal", "id": "93bf146f641b42a1b28c22b64ad0e23d", "name": "ironic"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://keymanager-3.foobar.cloud.cluster:443",
-        "region": "foobar", "interface": "public", "id": "43e287df110b4889a34eecbacdbd8a41"},
-        {"region_id": "foobar", "url": "http://barbican-api.openstack.svc.kubernetes.foobar.cloud.cluster:9311",
-        "region": "foobar", "interface": "internal", "id": "cc6e3f6b47de4213bdf663675baa4f86"},
-        {"region_id": "foobar", "url": "http://barbican-api.openstack.svc.kubernetes.foobar.cloud.cluster:9311",
-        "region": "foobar", "interface": "admin", "id": "461849e8b3a342d3a291506e1985b08d"}],
+        {"endpoints": [{"url": "https://keymanager-3.foobar.cloud.cluster:443", "interface":
+        "public", "region": "foobar", "region_id": "foobar", "id": "43e287df110b4889a34eecbacdbd8a41"},
+        {"url": "http://barbican-api.openstack.svc.kubernetes.foobar.cloud.cluster:9311",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "cc6e3f6b47de4213bdf663675baa4f86"}, {"url": "http://barbican-api.openstack.svc.kubernetes.foobar.cloud.cluster:9311",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "461849e8b3a342d3a291506e1985b08d"}],
         "type": "key-manager", "id": "08c811648b504ca2b2cfd88a2a07f194", "name": "barbican"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://volume-3.foobar.cloud.cluster:443/v2/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "public", "id": "52846c1572cf4f7b9074584fd5e9495d"},
-        {"region_id": "foobar", "url": "http://cinder-api.openstack.svc.kubernetes.foobar.cloud.cluster:8776/v2/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "internal", "id": "0ff5e424c17b4f2fb1aec59abfa482e3"},
-        {"region_id": "foobar", "url": "http://cinder-api.openstack.svc.kubernetes.foobar.cloud.cluster:8776/v2/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "admin", "id": "ecd9d544e4304d53929a1d9befe1eb7a"}],
+        {"endpoints": [{"url": "https://volume-3.foobar.cloud.cluster:443/v2/749899ac305441a086478b40eb4c18cd",
+        "interface": "public", "region": "foobar", "region_id": "foobar", "id":
+        "52846c1572cf4f7b9074584fd5e9495d"}, {"url": "http://cinder-api.openstack.svc.kubernetes.foobar.cloud.cluster:8776/v2/749899ac305441a086478b40eb4c18cd",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "0ff5e424c17b4f2fb1aec59abfa482e3"}, {"url": "http://cinder-api.openstack.svc.kubernetes.foobar.cloud.cluster:8776/v2/749899ac305441a086478b40eb4c18cd",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "ecd9d544e4304d53929a1d9befe1eb7a"}],
         "type": "volumev2", "id": "defd346d6cb145bc8c6dde484ff96e91", "name": "cinderv2"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://objectstore-3.foobar.cloud.cluster:443/v1/AUTH_749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "internal", "id": "8ae55154d72c45ac825ad17a5d2fe941"},
-        {"region_id": "foobar", "url": "https://objectstore-3.foobar.cloud.cluster:443/v1/AUTH_749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "public", "id": "a6ee953c5fc04fd48363c3aaaf469f17"},
-        {"region_id": "foobar", "url": "https://objectstore-3.foobar.cloud.cluster:443/v1",
-        "region": "foobar", "interface": "admin", "id": "4b9b0916e18c4757bd42cf29d449754e"}],
+        {"endpoints": [{"url": "https://objectstore-3.foobar.cloud.cluster:443/v1/AUTH_749899ac305441a086478b40eb4c18cd",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "8ae55154d72c45ac825ad17a5d2fe941"}, {"url": "https://objectstore-3.foobar.cloud.cluster:443/v1/AUTH_749899ac305441a086478b40eb4c18cd",
+        "interface": "public", "region": "foobar", "region_id": "foobar", "id":
+        "a6ee953c5fc04fd48363c3aaaf469f17"}, {"url": "https://objectstore-3.foobar.cloud.cluster:443/v1",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "4b9b0916e18c4757bd42cf29d449754e"}],
         "type": "object-store", "id": "857f8a01ba7d40399d7d3657c72b500e", "name":
-        "swift"}, {"endpoints": [{"region_id": "foobar", "url": "https://image-3.foobar.cloud.cluster:443",
-        "region": "foobar", "interface": "public", "id": "5338ffd565884035941ec3be3ad9002d"},
-        {"region_id": "foobar", "url": "http://glance.openstack.svc.kubernetes.foobar.cloud.cluster:9292",
-        "region": "foobar", "interface": "internal", "id": "81c0b570c44b4a978eb58a28e605f928"},
-        {"region_id": "foobar", "url": "http://glance.openstack.svc.kubernetes.foobar.cloud.cluster:9292",
-        "region": "foobar", "interface": "admin", "id": "c3967eb5b037433894e33218e6e953bb"}],
+        "swift"}, {"endpoints": [{"url": "https://image-3.foobar.cloud.cluster:443",
+        "interface": "public", "region": "foobar", "region_id": "foobar", "id":
+        "5338ffd565884035941ec3be3ad9002d"}, {"url": "http://glance.openstack.svc.kubernetes.foobar.cloud.cluster:9292",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "81c0b570c44b4a978eb58a28e605f928"}, {"url": "http://glance.openstack.svc.kubernetes.foobar.cloud.cluster:9292",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "c3967eb5b037433894e33218e6e953bb"}],
         "type": "image", "id": "1db038028295470499be817ca0880dbc", "name": "glance"},
-        {"endpoints": [{"region_id": "foobar", "url": "http://monasca-api.monasca.svc.kubernetes.foobar.cloud.cluster:8070/v2.0",
-        "region": "foobar", "interface": "admin", "id": "6f06c9fb62ee48a1b63cc77b2bf89ae1"},
-        {"region_id": "foobar", "url": "http://monasca-api.monasca.svc.kubernetes.foobar.cloud.cluster:8070/v2.0",
-        "region": "foobar", "interface": "internal", "id": "099c924a40da4862885ab324be95904f"},
-        {"region_id": "foobar", "url": "https://monitoring.foobar.cloud.cluster:443/v2.0",
-        "region": "foobar", "interface": "public", "id": "011d8cb4bd9a4917a6022c93fd105922"}],
-        "type": "monitoring", "id": "6f674669b6a04e15b1d1a97366b00395", "name": "monasca"},
-        {"endpoints": [{"region_id": "foobar", "url": "http://metering-3.foobar.cloud.cluster:8777",
-        "region": "foobar", "interface": "public", "id": "21e8e980f4a24731baeaea9b7a9a69d6"},
-        {"region_id": "foobar", "url": "http://metering-3.foobar.cloud.cluster:8777",
-        "region": "foobar", "interface": "internal", "id": "2ceaea4ea02746e2a8f5b98c6cae6868"},
-        {"region_id": "foobar", "url": "http://metering-3.foobar.cloud.cluster:8777",
-        "region": "foobar", "interface": "admin", "id": "7b35b996c1024b78951af72248bf96e5"}],
+        {"endpoints": [{"url": "http://monasca-api.monasca.svc.kubernetes.foobar.cloud.cluster:8070/v2.0",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "6f06c9fb62ee48a1b63cc77b2bf89ae1"},
+        {"url": "http://monasca-api.monasca.svc.kubernetes.foobar.cloud.cluster:8070/v2.0",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "099c924a40da4862885ab324be95904f"}, {"url": "https://monitoring.foobar.cloud.cluster:443/v2.0",
+        "interface": "public", "region": "foobar", "region_id": "foobar", "id":
+        "011d8cb4bd9a4917a6022c93fd105922"}], "type": "monitoring", "id": "6f674669b6a04e15b1d1a97366b00395",
+        "name": "monasca"}, {"endpoints": [{"url": "http://metering-3.foobar.cloud.cluster:8777",
+        "interface": "public", "region": "foobar", "region_id": "foobar", "id":
+        "21e8e980f4a24731baeaea9b7a9a69d6"}, {"url": "http://metering-3.foobar.cloud.cluster:8777",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "2ceaea4ea02746e2a8f5b98c6cae6868"}, {"url": "http://metering-3.foobar.cloud.cluster:8777",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "7b35b996c1024b78951af72248bf96e5"}],
         "type": "metering", "id": "621f5f04ac2248ec92f12edc8e941fde", "name": "ceilometer"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://billing.foobar.cloud.cluster:64000",
-        "region": "foobar", "interface": "public", "id": "124c9f35a3a84dc1afa52e58cff90233"}],
+        {"endpoints": [{"url": "https://billing.foobar.cloud.cluster:64000", "interface":
+        "public", "region": "foobar", "region_id": "foobar", "id": "124c9f35a3a84dc1afa52e58cff90233"}],
         "type": "clustercc-billing", "id": "da42a69c3e954cd8a24d28ed445e2a98", "name":
-        "clustercc-billing"}, {"endpoints": [{"region_id": "foobar", "url": "https://lyra.foobar.cloud.cluster:443",
-        "region": "foobar", "interface": "public", "id": "b035e9d2f7904476b258d2d9f6579f55"}],
-        "type": "automation", "id": "1e79086219354149b451d51feff38967", "name": "Lyra"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://compute-3.foobar.cloud.cluster:443/v2/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "public", "id": "383c3adc7a334d1e89f3d824167b4ad2"},
-        {"region_id": "foobar", "url": "http://nova-api.openstack.svc.kubernetes.foobar.cloud.cluster:8774/v2/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "internal", "id": "f92bf0dad1e941d09d9a08cb50362510"},
-        {"region_id": "foobar", "url": "http://nova-api.openstack.svc.kubernetes.foobar.cloud.cluster:8774/v2/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "admin", "id": "da09586d8bb44903a53efcebe67841d9"}],
+        "clustercc-billing"}, {"endpoints": [{"url": "https://lyra.foobar.cloud.cluster:443",
+        "interface": "public", "region": "foobar", "region_id": "foobar", "id":
+        "b035e9d2f7904476b258d2d9f6579f55"}], "type": "automation", "id": "1e79086219354149b451d51feff38967",
+        "name": "Lyra"}, {"endpoints": [{"url": "https://compute-3.foobar.cloud.cluster:443/v2/749899ac305441a086478b40eb4c18cd",
+        "interface": "public", "region": "foobar", "region_id": "foobar", "id":
+        "383c3adc7a334d1e89f3d824167b4ad2"}, {"url": "http://nova-api.openstack.svc.kubernetes.foobar.cloud.cluster:8774/v2/749899ac305441a086478b40eb4c18cd",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "f92bf0dad1e941d09d9a08cb50362510"}, {"url": "http://nova-api.openstack.svc.kubernetes.foobar.cloud.cluster:8774/v2/749899ac305441a086478b40eb4c18cd",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "da09586d8bb44903a53efcebe67841d9"}],
         "type": "compute", "id": "45b131798dc240c4b5d75e024dffc5b5", "name": "nova"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://identity.openstack:443/v3",
-        "region": "foobar", "interface": "public", "id": "7859f84c67d740b294c9a607d03c2991"},
-        {"region_id": "foobar", "url": "http://keystone.openstack.svc.kubernetes.foobar.cloud.cluster:5000/v3",
-        "region": "foobar", "interface": "internal", "id": "a2cff5bcad944eb4a10c06e6c05140eb"},
-        {"region_id": "foobar", "url": "https://identity-admin-3.foobar.cloud.cluster:443/v3",
-        "region": "foobar", "interface": "admin", "id": "5973c23918b8460886140c5ed6a5411b"}],
+        {"endpoints": [{"url": "https://identity.openstack:443/v3", "interface":
+        "public", "region": "foobar", "region_id": "foobar", "id": "7859f84c67d740b294c9a607d03c2991"},
+        {"url": "http://keystone.openstack.svc.kubernetes.foobar.cloud.cluster:5000/v3",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "a2cff5bcad944eb4a10c06e6c05140eb"}, {"url": "https://identity-admin-3.foobar.cloud.cluster:443/v3",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "5973c23918b8460886140c5ed6a5411b"}],
         "type": "identity", "id": "70c56d9a4833404e823ba1195a0f1a63", "name": "keystone"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://share-3.foobar.cloud.cluster:443/v1/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "public", "id": "aa42c3a4f7b54d95819fc6481626cedc"},
-        {"region_id": "foobar", "url": "http://manila-api.openstack.svc.kubernetes.foobar.cloud.cluster:8786/v1/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "internal", "id": "68abd86060354f83932f7d283339eff1"},
-        {"region_id": "foobar", "url": "http://manila-api.openstack.svc.kubernetes.foobar.cloud.cluster:8786/v1/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "admin", "id": "52450fbc1b4e48cda51bb5e58ab4b15f"}],
+        {"endpoints": [{"url": "https://share-3.foobar.cloud.cluster:443/v1/749899ac305441a086478b40eb4c18cd",
+        "interface": "public", "region": "foobar", "region_id": "foobar", "id":
+        "aa42c3a4f7b54d95819fc6481626cedc"}, {"url": "http://manila-api.openstack.svc.kubernetes.foobar.cloud.cluster:8786/v1/749899ac305441a086478b40eb4c18cd",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "68abd86060354f83932f7d283339eff1"}, {"url": "http://manila-api.openstack.svc.kubernetes.foobar.cloud.cluster:8786/v1/749899ac305441a086478b40eb4c18cd",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "52450fbc1b4e48cda51bb5e58ab4b15f"}],
         "type": "share", "id": "56626b3178214332873f8a277b497e3e", "name": "manila"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://volume-3.foobar.cloud.cluster:443/v1/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "public", "id": "6f338859ed944a10937bee3e2a580f22"},
-        {"region_id": "foobar", "url": "http://cinder-api.openstack.svc.kubernetes.foobar.cloud.cluster:8776/v1/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "internal", "id": "ef38079803a548dfb1937e363b404e23"},
-        {"region_id": "foobar", "url": "http://cinder-api.openstack.svc.kubernetes.foobar.cloud.cluster:8776/v1/749899ac305441a086478b40eb4c18cd",
-        "region": "foobar", "interface": "admin", "id": "4bf258d657234ceaa573f02cc5203895"}],
+        {"endpoints": [{"url": "https://volume-3.foobar.cloud.cluster:443/v1/749899ac305441a086478b40eb4c18cd",
+        "interface": "public", "region": "foobar", "region_id": "foobar", "id":
+        "6f338859ed944a10937bee3e2a580f22"}, {"url": "http://cinder-api.openstack.svc.kubernetes.foobar.cloud.cluster:8776/v1/749899ac305441a086478b40eb4c18cd",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "ef38079803a548dfb1937e363b404e23"}, {"url": "http://cinder-api.openstack.svc.kubernetes.foobar.cloud.cluster:8776/v1/749899ac305441a086478b40eb4c18cd",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "4bf258d657234ceaa573f02cc5203895"}],
         "type": "volume", "id": "e967f0a7931e49a4b235239f4fc0ed0e", "name": "cinder"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://network-3.foobar.cloud.cluster:443",
-        "region": "foobar", "interface": "public", "id": "12c7b0cb1f804325bd025fb32d8c33e7"},
-        {"region_id": "foobar", "url": "http://neutron-server.openstack.svc.kubernetes.foobar.cloud.cluster:9696",
-        "region": "foobar", "interface": "internal", "id": "a4e60839ebf54e02a6202c164cbc6a6e"},
-        {"region_id": "foobar", "url": "http://neutron-server.openstack.svc.kubernetes.foobar.cloud.cluster:9696",
-        "region": "foobar", "interface": "admin", "id": "9ad2510072024ecf8363c9d18eb4b431"}],
+        {"endpoints": [{"url": "https://network-3.foobar.cloud.cluster:443", "interface":
+        "public", "region": "foobar", "region_id": "foobar", "id": "12c7b0cb1f804325bd025fb32d8c33e7"},
+        {"url": "http://neutron-server.openstack.svc.kubernetes.foobar.cloud.cluster:9696",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "a4e60839ebf54e02a6202c164cbc6a6e"}, {"url": "http://neutron-server.openstack.svc.kubernetes.foobar.cloud.cluster:9696",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "9ad2510072024ecf8363c9d18eb4b431"}],
         "type": "network", "id": "5841d2e972ff44fdb1c789d5261f7318", "name": "neutron"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://dns-3.foobar.cloud.cluster:443",
-        "region": "foobar", "interface": "public", "id": "692e55cfdb704300967c7da0c55a43bb"},
-        {"region_id": "foobar", "url": "http://designate-api.openstack.svc.kubernetes.foobar.cloud.cluster:9001",
-        "region": "foobar", "interface": "internal", "id": "bcfa65f36471406f88b89706274d4465"},
-        {"region_id": "foobar", "url": "http://designate-api.openstack.svc.kubernetes.foobar.cloud.cluster:9001",
-        "region": "foobar", "interface": "admin", "id": "57f2b925603f4541b421bea815001b22"}],
+        {"endpoints": [{"url": "https://dns-3.foobar.cloud.cluster:443", "interface":
+        "public", "region": "foobar", "region_id": "foobar", "id": "692e55cfdb704300967c7da0c55a43bb"},
+        {"url": "http://designate-api.openstack.svc.kubernetes.foobar.cloud.cluster:9001",
+        "interface": "internal", "region": "foobar", "region_id": "foobar", "id":
+        "bcfa65f36471406f88b89706274d4465"}, {"url": "http://designate-api.openstack.svc.kubernetes.foobar.cloud.cluster:9001",
+        "interface": "admin", "region": "foobar", "region_id": "foobar", "id": "57f2b925603f4541b421bea815001b22"}],
         "type": "dns", "id": "1010a70e914348b59999eefc25b30e7d", "name": "designate"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://webcli.foobar.cloud.cluster:443",
-        "region": "foobar", "interface": "public", "id": "d60f246367664dc882a38007e3f77232"}],
+        {"endpoints": [{"url": "https://webcli.foobar.cloud.cluster:443", "interface":
+        "public", "region": "foobar", "region_id": "foobar", "id": "d60f246367664dc882a38007e3f77232"}],
         "type": "webcli", "id": "dc9517f106fc4517a3a9181ce5ed2c8d", "name": "webcli"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://cfm.foobar.cloud.cluster:443",
-        "region": "foobar", "interface": "public", "id": "cabb6add42914bfb9c06b70dd6e60303"}],
+        {"endpoints": [{"url": "https://cfm.foobar.cloud.cluster:443", "interface": "public",
+        "region": "foobar", "region_id": "foobar", "id": "cabb6add42914bfb9c06b70dd6e60303"}],
         "type": "database", "id": "30d6a9077e6041599918986622e83014", "name": "cfm"},
-        {"endpoints": [{"region_id": "foobar", "url": "https://limes-3.foobar.cloud.cluster",
-        "region": "foobar", "interface": "public", "id": "2a2cc43569c94083a888fc73aeb74f69"}],
+        {"endpoints": [{"url": "https://limes-3.foobar.cloud.cluster", "interface": "public",
+        "region": "foobar", "region_id": "foobar", "id": "2a2cc43569c94083a888fc73aeb74f69"}],
         "type": "resources", "id": "6a61eb04d9bc46e292d7aff87e7628d9", "name": "limes"}],
         "user": {"domain": {"id": "d247861f96094b689d1b358513638296", "name": "foobar"},
         "id": "bfa90acd1cad19d456bd101b5b4febf7444ee08d53dd7679ce35b322525776b2",
-        "name": "test_admin"}, "audit_ids": ["7CWuze1yQVaK-WRDqQ2LVA"], "issued_at":
-        "2017-04-18T08:32:55.000000Z"}}'
+        "name": "test_admin"}, "audit_ids": ["DMSUS3GnQ9urljFdDdiLzA"], "issued_at":
+        "2017-04-18T11:58:11.000000Z"}}'
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 08:32:53 GMT
+  recorded_at: Tue, 18 Apr 2017 11:58:09 GMT
 - request:
     method: get
     uri: https://limes-3.foobar.cloud.cluster/v1/domains/d247861f96094b689d1b358513638296/projects/749899ac305441a086478b40eb4c18cd
@@ -179,7 +179,7 @@ http_interactions:
       Accept:
       - application/json
       X-Auth-Token:
-      - gAAAAABY9c83O4FI7NVeB9898XaO9A7HBC4NM2HQkIdYpFbbDwiMfZs5_E1k5DPkh6t3yUI7zgn0UVtdAFpsoYd_RZxNLmRWXk1eOuPQgu_iav9I2Xo0_vAtDhH9_lizo1G7z3k_4vAfdG4_DxMwh-gZI2I5nTYwX1lnT08qVs7jlmJVyH6o0aVWFVEsWV_RgGdMGIU7-9zZIL8cXUSg2M3eoWvJjHMsQ-lBD56DXe6_Ozgu4uOfPKI
+      - gAAAAABY9f9TEwoJjH6AQmYGzr9v-bYxthjNxoJxX9syG1NPqO6S4Em7YM877kbYIIHB4hLsWYVLuV3HOicq2VPakEwtN2KaCd4eE5fUNOMEzwI1sI4WAodZ1KwG8Lw6gKTBXZ7xEqrHiqZme3vtF3zhTVm-PMRncYX6DlqPMWMIwQgPgGE2Ch7DTRY-Xdd8Yg4UYxzJwQPnwZ2gFDnKDGegCVlRja_AQOYuN23fxx6GqNepkc4KuLQ
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -192,7 +192,7 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 08:32:55 GMT
+      - Tue, 18 Apr 2017 11:58:11 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -203,9 +203,9 @@ http_interactions:
       - max-age=15724800; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"project":{"id":"749899ac305441a086478b40eb4c18cd","name":"limes-test","services":[{"type":"compute","resources":[{"name":"cores","quota":10,"usage":0},{"name":"instances","quota":10,"usage":0},{"name":"ram","unit":"MiB","quota":0,"usage":0}],"scraped_at":1492502818},{"type":"dns","resources":[{"name":"recordsets","quota":0,"usage":0},{"name":"zones","quota":0,"usage":0}],"scraped_at":1492296629},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":0,"usage":0}],"scraped_at":1492503804},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":0,"usage":0},{"name":"snapshots","quota":0,"usage":0},{"name":"volumes","quota":0,"usage":0}],"scraped_at":1492503125}]}}'
+      string: '{"project":{"id":"749899ac305441a086478b40eb4c18cd","name":"limes-test","services":[{"type":"compute","resources":[{"name":"cores","quota":10,"usage":0},{"name":"instances","quota":10,"usage":0},{"name":"ram","unit":"MiB","quota":0,"usage":0}],"scraped_at":1492516634},{"type":"dns","resources":[{"name":"recordsets","quota":0,"usage":0},{"name":"zones","quota":0,"usage":0}],"scraped_at":1492516634},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":0,"usage":0}],"scraped_at":1492516638},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":0,"usage":0},{"name":"snapshots","quota":0,"usage":0},{"name":"volumes","quota":0,"usage":0}],"scraped_at":1492516634}]}}'
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 08:32:54 GMT
+  recorded_at: Tue, 18 Apr 2017 11:58:09 GMT
 - request:
     method: get
     uri: https://limes-3.foobar.cloud.cluster/v1/domains/d247861f96094b689d1b358513638296/projects/749899ac305441a086478b40eb4c18cd?resource=ram&service=compute
@@ -218,7 +218,7 @@ http_interactions:
       Accept:
       - application/json
       X-Auth-Token:
-      - gAAAAABY9c83O4FI7NVeB9898XaO9A7HBC4NM2HQkIdYpFbbDwiMfZs5_E1k5DPkh6t3yUI7zgn0UVtdAFpsoYd_RZxNLmRWXk1eOuPQgu_iav9I2Xo0_vAtDhH9_lizo1G7z3k_4vAfdG4_DxMwh-gZI2I5nTYwX1lnT08qVs7jlmJVyH6o0aVWFVEsWV_RgGdMGIU7-9zZIL8cXUSg2M3eoWvJjHMsQ-lBD56DXe6_Ozgu4uOfPKI
+      - gAAAAABY9f9TEwoJjH6AQmYGzr9v-bYxthjNxoJxX9syG1NPqO6S4Em7YM877kbYIIHB4hLsWYVLuV3HOicq2VPakEwtN2KaCd4eE5fUNOMEzwI1sI4WAodZ1KwG8Lw6gKTBXZ7xEqrHiqZme3vtF3zhTVm-PMRncYX6DlqPMWMIwQgPgGE2Ch7DTRY-Xdd8Yg4UYxzJwQPnwZ2gFDnKDGegCVlRja_AQOYuN23fxx6GqNepkc4KuLQ
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -231,7 +231,7 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 08:32:55 GMT
+      - Tue, 18 Apr 2017 11:58:11 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -242,9 +242,9 @@ http_interactions:
       - max-age=15724800; includeSubDomains; preload
     body:
       encoding: UTF-8
-      string: '{"project":{"id":"749899ac305441a086478b40eb4c18cd","name":"limes-test","services":[{"type":"compute","resources":[{"name":"cores","quota":10,"usage":0},{"name":"ram","unit":"MiB","quota":0,"usage":0}],"scraped_at":1492502818}]}}'
+      string: '{"project":{"id":"749899ac305441a086478b40eb4c18cd","name":"limes-test","services":[{"type":"compute","resources":[{"name":"cores","quota":10,"usage":0},{"name":"ram","unit":"MiB","quota":0,"usage":0}],"scraped_at":1492516634}]}}'
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 08:32:54 GMT
+  recorded_at: Tue, 18 Apr 2017 11:58:09 GMT
 - request:
     method: post
     uri: https://limes-3.foobar.cloud.cluster/v1/domains/d247861f96094b689d1b358513638296/projects/749899ac305441a086478b40eb4c18cd/sync
@@ -257,7 +257,7 @@ http_interactions:
       Accept:
       - application/json
       X-Auth-Token:
-      - gAAAAABY9c83O4FI7NVeB9898XaO9A7HBC4NM2HQkIdYpFbbDwiMfZs5_E1k5DPkh6t3yUI7zgn0UVtdAFpsoYd_RZxNLmRWXk1eOuPQgu_iav9I2Xo0_vAtDhH9_lizo1G7z3k_4vAfdG4_DxMwh-gZI2I5nTYwX1lnT08qVs7jlmJVyH6o0aVWFVEsWV_RgGdMGIU7-9zZIL8cXUSg2M3eoWvJjHMsQ-lBD56DXe6_Ozgu4uOfPKI
+      - gAAAAABY9f9TEwoJjH6AQmYGzr9v-bYxthjNxoJxX9syG1NPqO6S4Em7YM877kbYIIHB4hLsWYVLuV3HOicq2VPakEwtN2KaCd4eE5fUNOMEzwI1sI4WAodZ1KwG8Lw6gKTBXZ7xEqrHiqZme3vtF3zhTVm-PMRncYX6DlqPMWMIwQgPgGE2Ch7DTRY-Xdd8Yg4UYxzJwQPnwZ2gFDnKDGegCVlRja_AQOYuN23fxx6GqNepkc4KuLQ
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -270,7 +270,7 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 08:32:55 GMT
+      - Tue, 18 Apr 2017 11:58:11 GMT
       Content-Type:
       - text/plain; charset=utf-8
       Content-Length:
@@ -283,5 +283,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 08:32:54 GMT
+  recorded_at: Tue, 18 Apr 2017 11:58:09 GMT
 recorded_with: VCR 3.0.3
