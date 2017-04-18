@@ -2,7 +2,7 @@
 
 This is the plugin Gem to consume the OpenStack Limes API.
 
-The main maintainer for the OpenStack limes section are **@hgw77**, **@majewsky**.
+The main maintainer for the OpenStack limes section are [hgw77](https://github.com/hgw77), [majewsky](https://github.com/majewsky).
 
 ## Installation
 
