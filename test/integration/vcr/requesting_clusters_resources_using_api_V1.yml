@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 11:58:11 GMT
+      - Wed, 19 Apr 2017 11:44:53 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -31,11 +31,11 @@ http_interactions:
       Connection:
       - keep-alive
       X-Subject-Token:
-      - gAAAAABY9f9TsWcR8bwiaqadgGfd2_PZssjKxFUnPZTkHLgsmRQS3xtTvB8TUmytSmrULuLGbIKN9Ajrm842rVAtSE9V9_oQR4rdVtVyTf7ByP2EvV-RHnc_3FDsDbuo6rPVVmr_gm6Gyt8IpFwfSaq_RPZw4_IaJ3eSEVQ94BUPdesTLEnw7-JYp4lEcyJMXChaSpDtOpgcsmQw8TXX38swdvVNEujwWVc4dL5kKttsoJPXe2HD-xA
+      - gAAAAABY9021xffnMKaAtEiGumLeiWVhhXAZ7-_VJ2LKnn4P3JzgNQ-BCmlzlWi8yWjMXH3M-ikddOWhVni5dU8-h006Go8WOsr_3BAH9Q3GYbcXh9vNraGkJmPiHzPkk4vIyfnb28AEGVb5NK0JbhocV_UJCkiC-MD5W6n3y57xjOruHxAYyr4t319rUNkiJPQtP01CPfJmwXxlGTnY7gGMw06UntlpDFfkwScGDf0efDRrifYfbwM
       Vary:
       - X-Auth-Token
       X-Openstack-Request-Id:
-      - req-49430e34-12de-43da-a514-d758cc15be92
+      - req-437c2afc-3a52-43ba-8996-64994f444424
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains; preload
     body:
@@ -168,12 +168,12 @@ http_interactions:
         {"endpoints": [{"url": "https://limes-3.foobar.cloud.cluster", "interface": "public",
         "region": "foobar", "region_id": "foobar", "id": "2a2cc43569c94083a888fc73aeb74f69"}],
         "type": "resources", "id": "6a61eb04d9bc46e292d7aff87e7628d9", "name": "limes"}],
-        "expires_at": "2017-04-18T19:58:11.000000Z", "user": {"domain": {"id": "ca1b267e149d4e44bf53d28d1c8d6bc9",
+        "expires_at": "2017-04-19T19:44:53.000000Z", "user": {"domain": {"id": "ca1b267e149d4e44bf53d28d1c8d6bc9",
         "name": "foobar"}, "id": "b1b6bf660c3ea2d0aec393431c0e32bf2c673d585c702143b5af87d679e8b371",
-        "name": "foobar"}, "audit_ids": ["KbiJLdlfSV-pHkCKhmnKYQ"], "issued_at":
-        "2017-04-18T11:58:11.000000Z"}}'
+        "name": "foobar"}, "audit_ids": ["QxaVieynSO6izNFm6ExRnw"], "issued_at":
+        "2017-04-19T11:44:53.000000Z"}}'
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 11:58:09 GMT
+  recorded_at: Wed, 19 Apr 2017 11:44:51 GMT
 - request:
     method: get
     uri: https://limes-3.foobar.cloud.cluster/v1/clusters
@@ -186,7 +186,7 @@ http_interactions:
       Accept:
       - application/json
       X-Auth-Token:
-      - gAAAAABY9f9TsWcR8bwiaqadgGfd2_PZssjKxFUnPZTkHLgsmRQS3xtTvB8TUmytSmrULuLGbIKN9Ajrm842rVAtSE9V9_oQR4rdVtVyTf7ByP2EvV-RHnc_3FDsDbuo6rPVVmr_gm6Gyt8IpFwfSaq_RPZw4_IaJ3eSEVQ94BUPdesTLEnw7-JYp4lEcyJMXChaSpDtOpgcsmQw8TXX38swdvVNEujwWVc4dL5kKttsoJPXe2HD-xA
+      - gAAAAABY9021xffnMKaAtEiGumLeiWVhhXAZ7-_VJ2LKnn4P3JzgNQ-BCmlzlWi8yWjMXH3M-ikddOWhVni5dU8-h006Go8WOsr_3BAH9Q3GYbcXh9vNraGkJmPiHzPkk4vIyfnb28AEGVb5NK0JbhocV_UJCkiC-MD5W6n3y57xjOruHxAYyr4t319rUNkiJPQtP01CPfJmwXxlGTnY7gGMw06UntlpDFfkwScGDf0efDRrifYfbwM
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -199,7 +199,7 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 11:58:11 GMT
+      - Wed, 19 Apr 2017 11:44:53 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -210,10 +210,11 @@ http_interactions:
       - max-age=15724800; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"clusters":[{"id":"ccloud","services":[{"type":"compute","resources":[{"name":"cores","capacity":400,"comment":"counted
-        them by hand","domains_quota":4216,"usage":135},{"name":"instances","capacity":200,"comment":"guesstimate","domains_quota":4146,"usage":57},{"name":"ram","unit":"MiB","domains_quota":4194304,"usage":82432}],"max_scraped_at":1492516634,"min_scraped_at":1492515431},{"type":"dns","resources":[{"name":"recordsets","domains_quota":1600,"usage":456},{"name":"zones","domains_quota":41,"usage":16}],"max_scraped_at":1492516634,"min_scraped_at":1492515768},{"type":"object-store","resources":[{"name":"capacity","unit":"B","domains_quota":20890720927744,"usage":1771634387561}],"max_scraped_at":1492516689,"min_scraped_at":1492514911},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","domains_quota":14336,"usage":788},{"name":"snapshots","domains_quota":612,"usage":7},{"name":"volumes","domains_quota":612,"usage":37}],"max_scraped_at":1492516634,"min_scraped_at":1492515771}],"max_scraped_at":1492516414,"min_scraped_at":1492516414}]}'
+      string: '{"clusters":[{"id":"ccloud","services":[{"type":"compute","resources":[{"name":"cores","capacity":500,"comment":"counted
+        them by hand","domains_quota":4120,"usage":145},{"name":"instances","capacity":300,"comment":"guesstimate","domains_quota":2051,"usage":60},{"name":"ram","unit":"MiB","domains_quota":4194304,"usage":92672}],"max_scraped_at":1492602037,"min_scraped_at":1492600514},{"type":"dns","resources":[{"name":"recordsets","domains_quota":1600,"usage":456},{"name":"zones","domains_quota":41,"usage":16}],"max_scraped_at":1492601929,"min_scraped_at":1492600694},{"type":"object-store","resources":[{"name":"capacity","unit":"B","capacity":56075093016576,"comment":"2
+        storage servers * 14 HDDs * 5.5 TiB / 3 replicas","domains_quota":20890720927744,"usage":1765774071018}],"max_scraped_at":1492602026,"min_scraped_at":1492600613},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","capacity":20480,"comment":"test","domains_quota":14336,"usage":777},{"name":"snapshots","domains_quota":612,"usage":7},{"name":"volumes","domains_quota":612,"usage":26}],"max_scraped_at":1492602281,"min_scraped_at":1492600492}],"max_scraped_at":1492602091,"min_scraped_at":1492602091}]}'
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 11:58:09 GMT
+  recorded_at: Wed, 19 Apr 2017 11:44:52 GMT
 - request:
     method: get
     uri: https://limes-3.foobar.cloud.cluster/v1/clusters?resource=ram&service=compute
@@ -226,7 +227,7 @@ http_interactions:
       Accept:
       - application/json
       X-Auth-Token:
-      - gAAAAABY9f9TsWcR8bwiaqadgGfd2_PZssjKxFUnPZTkHLgsmRQS3xtTvB8TUmytSmrULuLGbIKN9Ajrm842rVAtSE9V9_oQR4rdVtVyTf7ByP2EvV-RHnc_3FDsDbuo6rPVVmr_gm6Gyt8IpFwfSaq_RPZw4_IaJ3eSEVQ94BUPdesTLEnw7-JYp4lEcyJMXChaSpDtOpgcsmQw8TXX38swdvVNEujwWVc4dL5kKttsoJPXe2HD-xA
+      - gAAAAABY9021xffnMKaAtEiGumLeiWVhhXAZ7-_VJ2LKnn4P3JzgNQ-BCmlzlWi8yWjMXH3M-ikddOWhVni5dU8-h006Go8WOsr_3BAH9Q3GYbcXh9vNraGkJmPiHzPkk4vIyfnb28AEGVb5NK0JbhocV_UJCkiC-MD5W6n3y57xjOruHxAYyr4t319rUNkiJPQtP01CPfJmwXxlGTnY7gGMw06UntlpDFfkwScGDf0efDRrifYfbwM
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -239,7 +240,7 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 11:58:11 GMT
+      - Wed, 19 Apr 2017 11:44:53 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -250,8 +251,8 @@ http_interactions:
       - max-age=15724800; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"clusters":[{"id":"ccloud","services":[{"type":"compute","resources":[{"name":"cores","capacity":400,"comment":"counted
-        them by hand","domains_quota":4216,"usage":135},{"name":"ram","unit":"MiB","domains_quota":4194304,"usage":82432}],"max_scraped_at":1492516634,"min_scraped_at":1492515431}],"max_scraped_at":1492516414,"min_scraped_at":1492516414}]}'
+      string: '{"clusters":[{"id":"ccloud","services":[{"type":"compute","resources":[{"name":"cores","capacity":500,"comment":"counted
+        them by hand","domains_quota":4120,"usage":145},{"name":"ram","unit":"MiB","domains_quota":4194304,"usage":92672}],"max_scraped_at":1492602037,"min_scraped_at":1492600514}],"max_scraped_at":1492602091,"min_scraped_at":1492602091}]}'
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 11:58:10 GMT
+  recorded_at: Wed, 19 Apr 2017 11:44:52 GMT
 recorded_with: VCR 3.0.3

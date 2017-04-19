@@ -15,7 +15,7 @@ def auth_project
     :password       => ENV['TEST_PROJECT_PASSWORD'],
     :project_id     => ENV['TEST_PROJECT_ID'],
     :domain_id      => ENV['TEST_DOMAIN_ID'],
-    :user_domain_id => ENV['TEST_DOMAIN_ID']
+    :user_domain_id => ENV['TEST_DOMAIN_ID'],
   }
 end
 

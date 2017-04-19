@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 11:58:09 GMT
+      - Wed, 19 Apr 2017 11:44:52 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -31,11 +31,11 @@ http_interactions:
       Connection:
       - keep-alive
       X-Subject-Token:
-      - gAAAAABY9f9RTNx2gufQU3hZakbx3r3oVxzpIprVqwVOGupJz0FSsLcXhxFhY7H22UN4iH0hy9MhR7Jm_lepv0o2Yr8Pnun0xu6aBVZ_14KjIuhALO1FRC8Cc5N_CTdXox2KzsWjtgZ9jnSPNx-apfxz4o1MTVrmLDuEDzELD8rjeEjmZv3Etv_3CkqxGfGIXqVXvAtalNZka-b8d18uQjSxxfq_ML7sUnlGQT4BYMjdZ3fcYTRoaT0
+      - gAAAAABY90203_2-hZwLJhMETNjki_TX8zqOOAtAYaDlax7r4WBbxr2IYqy01vQmFFTFOiPTAiJlQUcUqR0u5XEqvxIGYjzILvGbk_IP-uxG8cDHT-1s7ObUZPWdW6VDzDmpZHdPTmcvMkspwwq57QkHqFEyRjDntgQ0suwlneZuDRgNLbwyT4e3DQvwjBFdCr2mevJAY1m4ipCjPpFmXDXpEmyJVZwueZGZVT1zhvB-8TuBs_3OVVM
       Vary:
       - X-Auth-Token
       X-Openstack-Request-Id:
-      - req-9737061a-7e4d-4c75-bf57-dcbcb053382b
+      - req-907317a8-e8ff-4d9d-aea1-cbf746bc809f
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains; preload
     body:
@@ -44,7 +44,7 @@ http_interactions:
         "foobar"}, "methods": ["password"], "roles": [{"id": "d1c1cd5484214574bb4fbc6595def9a6",
         "name": "admin"}, {"id": "6ee048ff73234dfd8ffe5e6c9fefd117", "name": "network_admin"},
         {"id": "df6f218971184020af05a9788ca4c0b9", "name": "member"}, {"id": "7949d9f70f41451b9b31232f1991af08",
-        "name": "resource_admin"}], "expires_at": "2017-04-18T19:58:09.000000Z", "catalog":
+        "name": "resource_admin"}], "expires_at": "2017-04-19T19:44:52.000000Z", "catalog":
         [{"endpoints": [], "type": "sharev2", "id": "999ab682b1da4982ac2eaa6d16e2f620",
         "name": "manilav2"}, {"endpoints": [{"url": "https://arc.foobar.cloud.cluster",
         "interface": "public", "region": "foobar", "region_id": "foobar", "id":
@@ -129,10 +129,10 @@ http_interactions:
         "type": "resources", "id": "6a61eb04d9bc46e292d7aff87e7628d9", "name": "limes"}],
         "user": {"domain": {"id": "d247861f96094b689d1b358513638296", "name": "foobar"},
         "id": "bfa90acd1cad19d456bd101b5b4febf7444ee08d53dd7679ce35b322525776b2",
-        "name": "test_admin"}, "audit_ids": ["jCMlRL1MTQ2qGSqlTs80BQ"], "issued_at":
-        "2017-04-18T11:58:09.000000Z"}}'
+        "name": "test_admin"}, "audit_ids": ["GGe9_yuyRFS2iNOb2AI0DA"], "issued_at":
+        "2017-04-19T11:44:52.000000Z"}}'
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 11:58:08 GMT
+  recorded_at: Wed, 19 Apr 2017 11:44:50 GMT
 - request:
     method: get
     uri: https://limes-3.foobar.cloud.cluster/v1/domains/d247861f96094b689d1b358513638296
@@ -145,7 +145,7 @@ http_interactions:
       Accept:
       - application/json
       X-Auth-Token:
-      - gAAAAABY9f9RTNx2gufQU3hZakbx3r3oVxzpIprVqwVOGupJz0FSsLcXhxFhY7H22UN4iH0hy9MhR7Jm_lepv0o2Yr8Pnun0xu6aBVZ_14KjIuhALO1FRC8Cc5N_CTdXox2KzsWjtgZ9jnSPNx-apfxz4o1MTVrmLDuEDzELD8rjeEjmZv3Etv_3CkqxGfGIXqVXvAtalNZka-b8d18uQjSxxfq_ML7sUnlGQT4BYMjdZ3fcYTRoaT0
+      - gAAAAABY90203_2-hZwLJhMETNjki_TX8zqOOAtAYaDlax7r4WBbxr2IYqy01vQmFFTFOiPTAiJlQUcUqR0u5XEqvxIGYjzILvGbk_IP-uxG8cDHT-1s7ObUZPWdW6VDzDmpZHdPTmcvMkspwwq57QkHqFEyRjDntgQ0suwlneZuDRgNLbwyT4e3DQvwjBFdCr2mevJAY1m4ipCjPpFmXDXpEmyJVZwueZGZVT1zhvB-8TuBs_3OVVM
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -158,7 +158,7 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 11:58:09 GMT
+      - Wed, 19 Apr 2017 11:44:52 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -169,9 +169,9 @@ http_interactions:
       - max-age=15724800; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"domain":{"id":"d247861f96094b689d1b358513638296","name":"foobar","services":[{"type":"compute","resources":[{"name":"cores","quota":100,"projects_quota":50,"usage":10},{"name":"instances","quota":50,"projects_quota":45,"usage":10},{"name":"ram","unit":"MiB","quota":3145728,"projects_quota":10240,"usage":6656}],"max_scraped_at":1492516634,"min_scraped_at":1492515431},{"type":"dns","resources":[{"name":"recordsets","quota":100,"projects_quota":0,"usage":0},{"name":"zones","quota":1,"projects_quota":0,"usage":0}],"max_scraped_at":1492516634,"min_scraped_at":1492515809},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":1099511627776,"projects_quota":6550412554,"usage":4975241}],"max_scraped_at":1492516689,"min_scraped_at":1492515061},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":10240,"projects_quota":60,"usage":11},{"name":"snapshots","quota":100,"projects_quota":20,"usage":0},{"name":"volumes","quota":100,"projects_quota":35,"usage":11}],"max_scraped_at":1492516634,"min_scraped_at":1492515772}]}}'
+      string: '{"domain":{"id":"d247861f96094b689d1b358513638296","name":"foobar","services":[{"type":"compute","resources":[{"name":"cores","quota":100,"projects_quota":50,"usage":10,"backend_quota":40},{"name":"instances","quota":50,"projects_quota":45,"usage":10,"backend_quota":35},{"name":"ram","unit":"MiB","quota":3145728,"projects_quota":10240,"usage":6656}],"max_scraped_at":1492601936,"min_scraped_at":1492600594},{"type":"dns","resources":[{"name":"recordsets","quota":100,"projects_quota":0,"usage":0},{"name":"zones","quota":1,"projects_quota":0,"usage":0}],"max_scraped_at":1492601929,"min_scraped_at":1492600694},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":1099511627776,"projects_quota":6550412554,"usage":4936773}],"max_scraped_at":1492601935,"min_scraped_at":1492600613},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":10240,"projects_quota":60,"usage":0,"backend_quota":10},{"name":"snapshots","quota":100,"projects_quota":20,"usage":0},{"name":"volumes","quota":100,"projects_quota":35,"usage":0}],"max_scraped_at":1492602169,"min_scraped_at":1492600623}]}}'
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 11:58:08 GMT
+  recorded_at: Wed, 19 Apr 2017 11:44:51 GMT
 - request:
     method: get
     uri: https://limes-3.foobar.cloud.cluster/v1/domains/d247861f96094b689d1b358513638296?resource=ram&service=compute
@@ -184,7 +184,7 @@ http_interactions:
       Accept:
       - application/json
       X-Auth-Token:
-      - gAAAAABY9f9RTNx2gufQU3hZakbx3r3oVxzpIprVqwVOGupJz0FSsLcXhxFhY7H22UN4iH0hy9MhR7Jm_lepv0o2Yr8Pnun0xu6aBVZ_14KjIuhALO1FRC8Cc5N_CTdXox2KzsWjtgZ9jnSPNx-apfxz4o1MTVrmLDuEDzELD8rjeEjmZv3Etv_3CkqxGfGIXqVXvAtalNZka-b8d18uQjSxxfq_ML7sUnlGQT4BYMjdZ3fcYTRoaT0
+      - gAAAAABY90203_2-hZwLJhMETNjki_TX8zqOOAtAYaDlax7r4WBbxr2IYqy01vQmFFTFOiPTAiJlQUcUqR0u5XEqvxIGYjzILvGbk_IP-uxG8cDHT-1s7ObUZPWdW6VDzDmpZHdPTmcvMkspwwq57QkHqFEyRjDntgQ0suwlneZuDRgNLbwyT4e3DQvwjBFdCr2mevJAY1m4ipCjPpFmXDXpEmyJVZwueZGZVT1zhvB-8TuBs_3OVVM
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -197,7 +197,7 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 11:58:10 GMT
+      - Wed, 19 Apr 2017 11:44:52 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -208,9 +208,9 @@ http_interactions:
       - max-age=15724800; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"domain":{"id":"d247861f96094b689d1b358513638296","name":"foobar","services":[{"type":"compute","resources":[{"name":"cores","quota":100,"projects_quota":50,"usage":10},{"name":"ram","unit":"MiB","quota":3145728,"projects_quota":10240,"usage":6656}],"max_scraped_at":1492516634,"min_scraped_at":1492515431}]}}'
+      string: '{"domain":{"id":"d247861f96094b689d1b358513638296","name":"foobar","services":[{"type":"compute","resources":[{"name":"cores","quota":100,"projects_quota":50,"usage":10,"backend_quota":40},{"name":"ram","unit":"MiB","quota":3145728,"projects_quota":10240,"usage":6656}],"max_scraped_at":1492601936,"min_scraped_at":1492600594}]}}'
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 11:58:08 GMT
+  recorded_at: Wed, 19 Apr 2017 11:44:51 GMT
 - request:
     method: put
     uri: https://limes-3.foobar.cloud.cluster/v1/domains/d247861f96094b689d1b358513638296/projects/749899ac305441a086478b40eb4c18cd
@@ -223,7 +223,7 @@ http_interactions:
       Accept:
       - application/json
       X-Auth-Token:
-      - gAAAAABY9f9RTNx2gufQU3hZakbx3r3oVxzpIprVqwVOGupJz0FSsLcXhxFhY7H22UN4iH0hy9MhR7Jm_lepv0o2Yr8Pnun0xu6aBVZ_14KjIuhALO1FRC8Cc5N_CTdXox2KzsWjtgZ9jnSPNx-apfxz4o1MTVrmLDuEDzELD8rjeEjmZv3Etv_3CkqxGfGIXqVXvAtalNZka-b8d18uQjSxxfq_ML7sUnlGQT4BYMjdZ3fcYTRoaT0
+      - gAAAAABY90203_2-hZwLJhMETNjki_TX8zqOOAtAYaDlax7r4WBbxr2IYqy01vQmFFTFOiPTAiJlQUcUqR0u5XEqvxIGYjzILvGbk_IP-uxG8cDHT-1s7ObUZPWdW6VDzDmpZHdPTmcvMkspwwq57QkHqFEyRjDntgQ0suwlneZuDRgNLbwyT4e3DQvwjBFdCr2mevJAY1m4ipCjPpFmXDXpEmyJVZwueZGZVT1zhvB-8TuBs_3OVVM
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -236,7 +236,7 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 11:58:10 GMT
+      - Wed, 19 Apr 2017 11:44:52 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -247,9 +247,9 @@ http_interactions:
       - max-age=15724800; includeSubDomains; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"project":{"id":"749899ac305441a086478b40eb4c18cd","name":"limes-test","services":[{"type":"compute","resources":[{"name":"cores","quota":10,"usage":0},{"name":"instances","quota":10,"usage":0},{"name":"ram","unit":"MiB","quota":0,"usage":0}],"scraped_at":1492516634},{"type":"dns","resources":[{"name":"recordsets","quota":0,"usage":0},{"name":"zones","quota":0,"usage":0}],"scraped_at":1492516634},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":0,"usage":0}],"scraped_at":1492516638},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":0,"usage":0},{"name":"snapshots","quota":0,"usage":0},{"name":"volumes","quota":0,"usage":0}],"scraped_at":1492516634}]}}'
+      string: '{"project":{"id":"749899ac305441a086478b40eb4c18cd","name":"limes-test","services":[{"type":"compute","resources":[{"name":"cores","quota":10,"usage":0,"backend_quota":0},{"name":"instances","quota":10,"usage":0,"backend_quota":0},{"name":"ram","unit":"MiB","quota":0,"usage":0}],"scraped_at":1492601936},{"type":"dns","resources":[{"name":"recordsets","quota":0,"usage":0},{"name":"zones","quota":0,"usage":0}],"scraped_at":1492601929},{"type":"object-store","resources":[{"name":"capacity","unit":"B","quota":0,"usage":0}],"scraped_at":1492601935},{"type":"volumev2","resources":[{"name":"capacity","unit":"GiB","quota":0,"usage":0},{"name":"snapshots","quota":0,"usage":0},{"name":"volumes","quota":0,"usage":0}],"scraped_at":1492601929}]}}'
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 11:58:08 GMT
+  recorded_at: Wed, 19 Apr 2017 11:44:51 GMT
 - request:
     method: get
     uri: https://limes-3.foobar.cloud.cluster/v1/domains/d247861f96094b689d1b358513638296/projects/749899ac305441a086478b40eb4c18cd?resource=instances&service=compute
@@ -262,7 +262,7 @@ http_interactions:
       Accept:
       - application/json
       X-Auth-Token:
-      - gAAAAABY9f9RTNx2gufQU3hZakbx3r3oVxzpIprVqwVOGupJz0FSsLcXhxFhY7H22UN4iH0hy9MhR7Jm_lepv0o2Yr8Pnun0xu6aBVZ_14KjIuhALO1FRC8Cc5N_CTdXox2KzsWjtgZ9jnSPNx-apfxz4o1MTVrmLDuEDzELD8rjeEjmZv3Etv_3CkqxGfGIXqVXvAtalNZka-b8d18uQjSxxfq_ML7sUnlGQT4BYMjdZ3fcYTRoaT0
+      - gAAAAABY90203_2-hZwLJhMETNjki_TX8zqOOAtAYaDlax7r4WBbxr2IYqy01vQmFFTFOiPTAiJlQUcUqR0u5XEqvxIGYjzILvGbk_IP-uxG8cDHT-1s7ObUZPWdW6VDzDmpZHdPTmcvMkspwwq57QkHqFEyRjDntgQ0suwlneZuDRgNLbwyT4e3DQvwjBFdCr2mevJAY1m4ipCjPpFmXDXpEmyJVZwueZGZVT1zhvB-8TuBs_3OVVM
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -275,20 +275,20 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 11:58:10 GMT
+      - Wed, 19 Apr 2017 11:44:53 GMT
       Content-Type:
       - application/json
-      Content-Length:
-      - '223'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Strict-Transport-Security:
       - max-age=15724800; includeSubDomains; preload
     body:
-      encoding: UTF-8
-      string: '{"project":{"id":"749899ac305441a086478b40eb4c18cd","name":"limes-test","services":[{"type":"compute","resources":[{"name":"cores","quota":10,"usage":0},{"name":"instances","quota":10,"usage":0}],"scraped_at":1492516634}]}}'
+      encoding: ASCII-8BIT
+      string: '{"project":{"id":"749899ac305441a086478b40eb4c18cd","name":"limes-test","services":[{"type":"compute","resources":[{"name":"cores","quota":10,"usage":0,"backend_quota":0},{"name":"instances","quota":10,"usage":0,"backend_quota":0}],"scraped_at":1492601936}]}}'
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 11:58:08 GMT
+  recorded_at: Wed, 19 Apr 2017 11:44:51 GMT
 - request:
     method: post
     uri: https://limes-3.foobar.cloud.cluster/v1/domains/d247861f96094b689d1b358513638296/projects/discover
@@ -301,7 +301,7 @@ http_interactions:
       Accept:
       - application/json
       X-Auth-Token:
-      - gAAAAABY9f9RTNx2gufQU3hZakbx3r3oVxzpIprVqwVOGupJz0FSsLcXhxFhY7H22UN4iH0hy9MhR7Jm_lepv0o2Yr8Pnun0xu6aBVZ_14KjIuhALO1FRC8Cc5N_CTdXox2KzsWjtgZ9jnSPNx-apfxz4o1MTVrmLDuEDzELD8rjeEjmZv3Etv_3CkqxGfGIXqVXvAtalNZka-b8d18uQjSxxfq_ML7sUnlGQT4BYMjdZ3fcYTRoaT0
+      - gAAAAABY90203_2-hZwLJhMETNjki_TX8zqOOAtAYaDlax7r4WBbxr2IYqy01vQmFFTFOiPTAiJlQUcUqR0u5XEqvxIGYjzILvGbk_IP-uxG8cDHT-1s7ObUZPWdW6VDzDmpZHdPTmcvMkspwwq57QkHqFEyRjDntgQ0suwlneZuDRgNLbwyT4e3DQvwjBFdCr2mevJAY1m4ipCjPpFmXDXpEmyJVZwueZGZVT1zhvB-8TuBs_3OVVM
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -314,7 +314,7 @@ http_interactions:
       Server:
       - nginx/1.11.10
       Date:
-      - Tue, 18 Apr 2017 11:58:10 GMT
+      - Wed, 19 Apr 2017 11:44:53 GMT
       Connection:
       - keep-alive
       Strict-Transport-Security:
@@ -323,5 +323,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 18 Apr 2017 11:58:08 GMT
+  recorded_at: Wed, 19 Apr 2017 11:44:51 GMT
 recorded_with: VCR 3.0.3

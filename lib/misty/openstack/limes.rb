@@ -2,12 +2,14 @@ require 'misty'
 
 module Misty
   
-  SERVICES = []
-  SERVICES << Service.new(:resources,:limes,["v1"])
-  
   class Cloud
 
-    Options = Struct.new(:resources)
+    def initialize(params = {:auth => {}})
+      @params = params
+      @config = self.class.set_configuration(params)
+      @services = Misty.services
+      @services.add(:resources,:limes,["v1"])
+    end
 
     def resources
       @resources ||= build_service(:resources)
