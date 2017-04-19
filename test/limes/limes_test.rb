@@ -9,7 +9,14 @@ describe "limes features" do
   it "GET requests project resources" do
     VCR.use_cassette "requesting project resources using api V1" do
       
-      cloud = Misty::Cloud.new(:auth => auth_project, :region_id => ENV["TEST_REGION_ID"], :log_level => 2, :ssl_verify_mode => false)
+      cloud = Misty::Cloud.new(
+        :auth             => auth_project,
+        :region_id        => ENV["TEST_REGION_ID"],
+        :log_level        => 2,
+        :ssl_verify_mode  => false,
+        :http_proxy       => ENV['http_proxy']
+      )
+      
       response = cloud.resources.get_project(ENV["TEST_DOMAIN_ID"],ENV["TEST_PROJECT_ID"])
       response.code.must_equal "200"
       assert_equal ENV["TEST_PROJECT_ID"], response.body["project"]["id"], "check for project id"
@@ -38,7 +45,13 @@ describe "limes features" do
   it "GET requests project resources" do
     VCR.use_cassette "requesting projects resources using api V1" do
       
-      cloud = Misty::Cloud.new(:auth => auth_domain, :region_id => ENV["TEST_REGION_ID"], :log_level => 2, :ssl_verify_mode => false)
+      cloud = Misty::Cloud.new(
+        :auth             => auth_domain, 
+        :region_id        => ENV["TEST_REGION_ID"], 
+        :log_level        => 2, 
+        :ssl_verify_mode  => false,
+        :http_proxy       => ENV['http_proxy']
+      )
       
       response = cloud.resources.get_projects(ENV["TEST_DOMAIN_ID"])
       response.code.must_equal "200"
@@ -64,7 +77,13 @@ describe "limes features" do
   it "GET requests domain resources" do
     VCR.use_cassette "requesting domain resources using api V1" do
       
-      cloud = Misty::Cloud.new(:auth => auth_domain, :region_id => ENV["TEST_REGION_ID"], :log_level => 2, :ssl_verify_mode => false)
+      cloud = Misty::Cloud.new(
+        :auth => auth_domain,
+        :region_id        => ENV["TEST_REGION_ID"],
+        :log_level        => 2,
+        :ssl_verify_mode  => false,
+        :http_proxy       => ENV['http_proxy']
+      )
       
       response = cloud.resources.get_domain(ENV["TEST_DOMAIN_ID"])
       response.code.must_equal "200"
@@ -123,7 +142,13 @@ describe "limes features" do
   it "GET requests domains resources" do
     VCR.use_cassette "requesting domains resources using api V1" do
       
-      cloud = Misty::Cloud.new(:auth => auth_cloud_admin, :region_id => ENV["TEST_REGION_ID"], :log_level => 2, :ssl_verify_mode => false)
+      cloud = Misty::Cloud.new(
+        :auth             => auth_cloud_admin,
+        :region_id        => ENV["TEST_REGION_ID"],
+        :log_level        => 2,
+        :ssl_verify_mode  => false,
+        :http_proxy       => ENV['http_proxy']
+      )
       
       response = cloud.resources.get_domains
       response.code.must_equal "200"
@@ -152,7 +177,13 @@ describe "limes features" do
   it "GET requests cluster resources" do
     VCR.use_cassette "requesting cluster resources using api V1" do
       
-      cloud = Misty::Cloud.new(:auth => auth_cloud_admin, :region_id => ENV["TEST_REGION_ID"], :log_level => 2, :ssl_verify_mode => false)
+      cloud = Misty::Cloud.new(
+        :auth             => auth_cloud_admin,
+        :region_id        => ENV["TEST_REGION_ID"],
+        :log_level        => 2,
+        :ssl_verify_mode  => false,
+        :http_proxy       => ENV['http_proxy']
+      )
       
       response = cloud.resources.get_cluster("ccloud")
       response.code.must_equal "200"
@@ -242,10 +273,48 @@ describe "limes features" do
     end
   end
 
+  it "GET requests current cluster resources" do
+    VCR.use_cassette "requesting current cluster resources using api V1" do
+      
+      cloud = Misty::Cloud.new(
+        :auth             => auth_cloud_admin,
+        :region_id        => ENV["TEST_REGION_ID"],
+        :log_level        => 2,
+        :ssl_verify_mode  => false,
+        :http_proxy       => ENV['http_proxy']
+      )
+      
+      response = cloud.resources.get_current_cluster
+      response.code.must_equal "200"
+      assert_equal "object-store", response.body["cluster"]["services"][2]["type"], "check for service  object-store"
+      assert_equal "capacity", response.body["cluster"]["services"][2]["resources"][0]["name"], "check for resource capacity"
+      assert_equal "B", response.body["cluster"]["services"][2]["resources"][0]["unit"], "check resource unit"
+      assert_kind_of Integer, response.body["cluster"]["services"][2]["resources"][0]["domains_quota"], "check resource quota"
+      assert_kind_of Integer, response.body["cluster"]["services"][2]["resources"][0]["usage"], "check resource usage"
+
+      response = cloud.resources.get_current_cluster("resource=cores&service=compute&resource=ram")
+      response.code.must_equal "200"
+      assert_equal "compute", response.body["cluster"]["services"][0]["type"], "check for service  compute"
+      assert_equal "cores", response.body["cluster"]["services"][0]["resources"][0]["name"], "check for resource cores"
+      assert_kind_of Integer, response.body["cluster"]["services"][0]["resources"][0]["domains_quota"], "check resource quota"
+      assert_kind_of Integer, response.body["cluster"]["services"][0]["resources"][0]["usage"], "check resource usage"
+      assert_equal "ram", response.body["cluster"]["services"][0]["resources"][1]["name"], "check for resource ram"
+      assert_kind_of Integer, response.body["cluster"]["services"][0]["resources"][1]["domains_quota"], "check resource quota"
+      assert_kind_of Integer, response.body["cluster"]["services"][0]["resources"][1]["usage"], "check resource usage"
+
+    end
+  end
+
   it "GET requests clusters resources" do
     VCR.use_cassette "requesting clusters resources using api V1" do
       
-      cloud = Misty::Cloud.new(:auth => auth_cloud_admin, :region_id => ENV["TEST_REGION_ID"], :log_level => 2, :ssl_verify_mode => false)
+      cloud = Misty::Cloud.new(
+        :auth             => auth_cloud_admin,
+        :region_id        => ENV["TEST_REGION_ID"],
+        :log_level        => 2,
+        :ssl_verify_mode  => false,
+        :http_proxy       => ENV['http_proxy']
+      )
       
       response = cloud.resources.get_clusters
       response.code.must_equal "200"
