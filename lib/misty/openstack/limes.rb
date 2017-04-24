@@ -1,20 +1,18 @@
 require 'misty'
 
 module Misty
-  
+
+  @services_plus_limes = self.services
+  @services_plus_limes.add(:resources, :limes, ["v1"])
+
+  def self.services
+    @services_plus_limes
+  end
+
   class Cloud
-
-    def initialize(params = {:auth => {}})
-      @params = params
-      @config = self.class.set_configuration(params)
-      @services = Misty.services
-      @services.add(:resources,:limes,["v1"])
-    end
-
     def resources
       @resources ||= build_service(:resources)
     end
-
   end
 
   module Openstack
