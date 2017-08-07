@@ -1,3 +1,5 @@
+Note: This gem is obsolete please use [misty-cc](https://github.com/sapcc/misty-cc) instead 
+
 # Misty::Openstack::Limes
 
 This is the plugin Gem to consume the OpenStack Limes API.
